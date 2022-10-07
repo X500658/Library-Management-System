@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="available_copies" label="available copies" language="en" table="x_898711_library_m_books">
+    <sys_documentation element="available_copies" label="Available Copies" language="en" table="x_898711_library_m_books">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>available_copies</element>
             <help/>
             <hint/>
-            <label>available copies</label>
+            <label>Available Copies</label>
             <language>en</language>
             <name>x_898711_library_m_books</name>
-            <plural>available copies</plural>
+            <plural>Available Copies</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-10-07 00:57:38</sys_created_on>
             <sys_id>f7b40503975211103e1f7cb0f053afbd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>available copies</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Available Copies</sys_name>
             <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
             <sys_policy/>
             <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
             <sys_update_name>sys_documentation_x_898711_library_m_books_available_copies_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-07 00:57:38</sys_updated_on>
+            <sys_updated_on>2022-10-07 02:11:26</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="books" max_length="40" name="x_898711_library_m_books" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Author" max_length="40" name="author" type="string"/>
-        <element label="available copies" max_length="40" name="available_copies" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" label="book summary" max_length="1000" name="book_summary" type="string"/>
+        <element label="Available Copies" max_length="40" name="available_copies" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Book Summary" max_length="1000" name="book_summary" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Edition" max_length="40" name="edition" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Genre" max_length="40" name="genre" type="choice">
             <choice/>
         </element>
-        <element label="Image" max_length="40" name="image" type="integer"/>
+        <element label="image" max_length="40" name="image" type="user_image"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Publisher" max_length="40" name="publisher" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Title" max_length="100" name="title" type="string"/>
