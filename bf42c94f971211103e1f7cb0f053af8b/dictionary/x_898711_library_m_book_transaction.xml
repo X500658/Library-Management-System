@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Book Transaction" max_length="40" name="x_898711_library_m_book_transaction" type="collection">
+        <element label="Borrowed by" mandatory="true" max_length="80" name="u_field_name_1" reference="sys_user" type="reference"/>
+        <element label="Overdue Fee" mandatory="true" max_length="5" name="u_field_name_2" type="currency"/>
+    </element>
+</database>
