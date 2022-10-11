@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-11 01:25:23</sys_created_on>
+        <sys_id>e571759c976211103e1f7cb0f053afa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x.898711.library-management-system.*.x_898711_library_m.patron</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_security_acl display_value="x.898711.library-management-system.*">9b61b19c976211103e1f7cb0f053af55</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_e571759c976211103e1f7cb0f053afa0</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-11 01:25:23</sys_updated_on>
+        <sys_user_role display_value="x_898711_library_m.patron" name="x_898711_library_m.patron">00c24d8b971211103e1f7cb0f053af2d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_security_acl_role_e571759c976211103e1f7cb0f053afa0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-10-11 01:25:23</sys_created_on><sys_id>e571759c976211103e1f7cb0f053afa0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x.898711.library-management-system.*.x_898711_library_m.patron</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_security_acl display_value="x.898711.library-management-system.*">9b61b19c976211103e1f7cb0f053af55</sys_security_acl><sys_update_name>sys_security_acl_role_e571759c976211103e1f7cb0f053afa0</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-10-11 01:25:23</sys_updated_on><sys_user_role display_value="x_898711_library_m.patron" name="x_898711_library_m.patron">00c24d8b971211103e1f7cb0f053af2d</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1843796457</payload_hash>
+        <record_name>x.898711.library-management-system.*.x_898711_library_m.patron</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-11 01:25:23</sys_created_on>
+        <sys_id>e571759c976211103e1f7cb0f053afa2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183c4a57db10000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-11 01:25:23</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2171759c536211104e132efa45b4e1a2</update_guid>
+        <update_guid_history>2171759c536211104e132efa45b4e1a2:1843796457</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x.898711.library-management-system.*.x_898711_library_m.patron">000686d097e211103e1f7cb0f053afdc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-11 02:55:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>7ffde4aa73fc442497fd6482f8ebcb90</sys_id>
+        <sys_metadata>e571759c976211103e1f7cb0f053afa0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x.898711.library-management-system.*.x_898711_library_m.patron</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_e571759c976211103e1f7cb0f053afa0</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_e571759c976211103e1f7cb0f053afa0">e571759c976211103e1f7cb0f053afa2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-11 02:55:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
