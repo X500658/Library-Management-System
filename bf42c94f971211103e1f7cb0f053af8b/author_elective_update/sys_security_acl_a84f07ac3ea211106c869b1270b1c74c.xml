@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>ACL check for Request Item Data Broker</description>
+        <name>e84f07ac92a21110c5843ffaeec6154c</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-12 02:53:43</sys_created_on>
+        <sys_id>a84f07ac3ea211106c869b1270b1c74c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e84f07ac92a21110c5843ffaeec6154c</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_security_acl_a84f07ac3ea211106c869b1270b1c74c</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-12 02:53:43</sys_updated_on>
+        <type display_value="ux_data_broker">6d9c40e9531210101cb3ddeeff7b12f6</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_security_acl_a84f07ac3ea211106c869b1270b1c74c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>ACL check for Request Item Data Broker</description><name>e84f07ac92a21110c5843ffaeec6154c</name><operation display_value="execute">execute</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-10-12 02:53:43</sys_created_on><sys_id>a84f07ac3ea211106c869b1270b1c74c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>e84f07ac92a21110c5843ffaeec6154c</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_security_acl_a84f07ac3ea211106c869b1270b1c74c</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-10-12 02:53:43</sys_updated_on><type display_value="ux_data_broker">6d9c40e9531210101cb3ddeeff7b12f6</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-1438178752</payload_hash>
+        <record_name>e84f07ac92a21110c5843ffaeec6154c</record_name>
+        <reverted_from/>
+        <source>0dd3b206970211103e1f7cb0f053afff</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-09-21 20:13:20</sys_created_on>
+        <sys_id>c30048bc976611103e1f7cb0f053af97</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18361aef7000000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Access Control</type>
+        <update_guid>830048bc5d66111021ccc3b149aadb97</update_guid>
+        <update_guid_history>830048bc5d66111021ccc3b149aadb97:-1438178752</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-12 06:26:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>0a4b7387150a41fe856df45a8990e164</sys_id>
+        <sys_metadata>a84f07ac3ea211106c869b1270b1c74c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e84f07ac92a21110c5843ffaeec6154c</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_a84f07ac3ea211106c869b1270b1c74c</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_a84f07ac3ea211106c869b1270b1c74c">c30048bc976611103e1f7cb0f053af97</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-12 06:26:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

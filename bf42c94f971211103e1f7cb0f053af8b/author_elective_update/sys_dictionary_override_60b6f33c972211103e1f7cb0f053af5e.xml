@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="DELETE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value>None</default_value>
+        <default_value_override>true</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>assignment_group</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_898711_library_m_book_transaction</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual>type=null^ORtype=3D2a4521c497a611103e1f7cb0f053aff6^EQ</reference_qual>
+        <reference_qual_override>true</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-13 00:31:23</sys_created_on>
+        <sys_id>60b6f33c972211103e1f7cb0f053af5e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>assignment_group</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_dictionary_override_60b6f33c972211103e1f7cb0f053af5e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-13 00:33:02</sys_updated_on>
+    </sys_dictionary_override>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_dictionary_override_60b6f33c972211103e1f7cb0f053af5e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override"><sys_dictionary_override action="INSERT_OR_UPDATE"><attributes/><attributes_override>false</attributes_override><base_table>task</base_table><calculation/><calculation_override>false</calculation_override><default_value>None</default_value><default_value_override>true</default_value_override><dependent/><dependent_override>false</dependent_override><display_override>false</display_override><element>assignment_group</element><mandatory>false</mandatory><mandatory_override>false</mandatory_override><name>x_898711_library_m_book_transaction</name><read_only>false</read_only><read_only_override>false</read_only_override><reference_qual>type=null^ORtype=3D2a4521c497a611103e1f7cb0f053aff6^EQ</reference_qual><reference_qual_override>true</reference_qual_override><sys_class_name>sys_dictionary_override</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-13 00:31:23</sys_created_on><sys_id>60b6f33c972211103e1f7cb0f053af5e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>assignment_group</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_dictionary_override_60b6f33c972211103e1f7cb0f053af5e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-13 00:33:02</sys_updated_on></sys_dictionary_override></record_update>]]></payload>
+        <payload_hash>169004441</payload_hash>
+        <record_name>assignment_group</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-13 00:33:02</sys_created_on>
+        <sys_id>c2a8f7bc972211103e1f7cb0f053afbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183cec2487c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-13 00:33:02</sys_updated_on>
+        <type>Dictionary Entry Override</type>
+        <update_guid>0ea87b7c29221110aa49bfb64d318ca7</update_guid>
+        <update_guid_history>0ea87b7c29221110aa49bfb64d318ca7:169004441,8248bb7cb42211104a721b44b405af2c:1270723696</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-13 00:44:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary_override">sys_dictionary_override</sys_db_object>
+        <sys_id>0ddb8b1a3567409087d7d9851c573040</sys_id>
+        <sys_metadata>60b6f33c972211103e1f7cb0f053af5e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assignment_group</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent display_value="x_898711_library_m_book_transaction">94d3d144976611103e1f7cb0f053af6d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_dictionary_override_60b6f33c972211103e1f7cb0f053af5e</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_override_60b6f33c972211103e1f7cb0f053af5e">c2a8f7bc972211103e1f7cb0f053afbf</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-13 00:44:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

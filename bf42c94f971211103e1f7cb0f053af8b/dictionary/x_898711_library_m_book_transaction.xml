@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Book Transaction" max_length="40" name="x_898711_library_m_book_transaction" sizeclass="0" type="collection">
-        <element label="Borrowed book" max_length="32" name="borrowed_book" reference="x_898711_library_m_books" type="reference"/>
+    <element extends="task" label="Book Transaction" max_length="40" name="x_898711_library_m_book_transaction" sizeclass="20" type="collection">
+        <element attributes="ref_auto_completer=AJAXReferenceChoice" choice="3" label="Borrowed books" max_length="32" name="borrowed_book" reference="x_898711_library_m_books" type="glide_list">
+            <choice/>
+        </element>
         <element default="javascript: gs.getUserDisplayName();" label="Borrowed by" mandatory="true" max_length="80" name="u_field_name_1" reference="sys_user" type="reference"/>
-        <element label="Overdue Fee" mandatory="true" max_length="20" name="u_field_name_2" type="currency"/>
+        <element label="Overdue Fee" mandatory="true" max_length="5" name="u_field_name_2" type="currency"/>
     </element>
 </database>

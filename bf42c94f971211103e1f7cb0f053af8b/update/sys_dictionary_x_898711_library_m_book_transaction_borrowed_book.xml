@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>ref_auto_completer=AJAXReferenceChoice</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -11,10 +11,10 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice/>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Borrowed book</column_label>
+        <column_label>Borrowed books</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -32,7 +32,7 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Reference">reference</internal_type>
+        <internal_type display_value="">glide_list</internal_type>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
         <name>x_898711_library_m_book_transaction</name>
@@ -54,14 +54,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-10-11 07:27:27</sys_created_on>
         <sys_id>ece3c3dc97a611103e1f7cb0f053afa4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Borrowed book</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Borrowed books</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_dictionary_x_898711_library_m_book_transaction_borrowed_book</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-11 07:27:27</sys_updated_on>
+        <sys_updated_on>2022-10-14 01:16:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
