@@ -1,120 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_898711_library_m_book_transaction" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="approval" table="x_898711_library_m_book_transaction" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
-            <element>state</element>
+            <element>approval</element>
             <name>x_898711_library_m_book_transaction</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:46:05</sys_created_on>
-            <sys_id>46984f1497e611103e1f7cb0f053af42</sys_id>
+            <sys_created_on>2022-10-18 00:56:44</sys_created_on>
+            <sys_id>5e0ea16e972211103e1f7cb0f053afc3</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>state</sys_name>
+            <sys_name>approval</sys_name>
             <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
             <sys_policy/>
             <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
-            <sys_update_name>sys_choice_x_898711_library_m_book_transaction_state</sys_update_name>
+            <sys_update_name>sys_choice_x_898711_library_m_book_transaction_approval</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-11 07:46:05</sys_updated_on>
+            <sys_updated_on>2022-10-18 00:56:44</sys_updated_on>
         </sys_choice_set>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Pending</label>
-            <language>en</language>
-            <name>x_898711_library_m_book_transaction</name>
-            <sequence>0</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:46:05</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>02984f1497e611103e1f7cb0f053af42</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-11 07:46:05</sys_updated_on>
-            <value>-5</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
+            <element>approval</element>
             <hint/>
             <inactive>true</inactive>
-            <label>Returned</label>
+            <label>Cancelled</label>
             <language>en</language>
             <name>x_898711_library_m_book_transaction</name>
             <sequence>0</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:46:05</sys_created_on>
+            <sys_created_on>2022-10-18 00:56:45</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>8e984f1497e611103e1f7cb0f053af78</sys_id>
-            <sys_mod_count>3</sys_mod_count>
+            <sys_id>920ea16e972211103e1f7cb0f053afcd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-18 01:03:44</sys_updated_on>
-            <value>3</value>
+            <sys_updated_on>2022-10-18 00:59:59</sys_updated_on>
+            <value>cancelled</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>state</element>
+            <element>approval</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Borrowing</label>
+            <label>Not Yet Requested</label>
+            <language>en</language>
+            <name>x_898711_library_m_book_transaction</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-18 00:56:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d60ea16e972211103e1f7cb0f053afc3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-18 00:56:44</sys_updated_on>
+            <value>not requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Requested</label>
             <language>en</language>
             <name>x_898711_library_m_book_transaction</name>
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:46:05</sys_created_on>
+            <sys_created_on>2022-10-18 00:56:45</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ca984f1497e611103e1f7cb0f053af76</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_id>1e0ea16e972211103e1f7cb0f053afc6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-14 01:04:51</sys_updated_on>
-            <value>2</value>
+            <sys_updated_on>2022-10-18 00:56:45</sys_updated_on>
+            <value>requested</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>state</element>
+            <element>approval</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Returned</label>
+            <label>Approved</label>
             <language>en</language>
             <name>x_898711_library_m_book_transaction</name>
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:49:25</sys_created_on>
+            <sys_created_on>2022-10-18 00:56:45</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>36590f5497e611103e1f7cb0f053afbc</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_id>9e0ea16e972211103e1f7cb0f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-18 01:03:44</sys_updated_on>
-            <value>4</value>
+            <sys_updated_on>2022-10-18 00:56:45</sys_updated_on>
+            <value>approved</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>state</element>
+            <element>approval</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Cancelled</label>
+            <label>Rejected</label>
             <language>en</language>
             <name>x_898711_library_m_book_transaction</name>
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-10-11 07:46:05</sys_created_on>
+            <sys_created_on>2022-10-18 00:56:45</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>42984f1497e611103e1f7cb0f053af7b</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_id>120ea16e972211103e1f7cb0f053afcb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-10-18 01:03:44</sys_updated_on>
-            <value>-1</value>
+            <sys_updated_on>2022-10-18 00:56:45</sys_updated_on>
+            <value>rejected</value>
         </sys_choice>
     </sys_choice>
 </record_update>

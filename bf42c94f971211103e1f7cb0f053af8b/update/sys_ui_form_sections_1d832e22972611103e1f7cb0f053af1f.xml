@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="1d832e22972611103e1f7cb0f053af1f" sys_domain="global" table="x_898711_library_m_book_transaction" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-18 04:50:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a1832e22972611103e1f7cb0f053af22</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_898711_library_m_book_transaction" name="x_898711_library_m_book_transaction" sys_domain="global" view="Default view">1d832e22972611103e1f7cb0f053af1f</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_898711_library_m_book_transaction" sys_domain="global" view="Default view">15f41184976611103e1f7cb0f053aff4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-18 04:50:26</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_898711_library_m_book_transaction</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-18 04:50:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d832e22972611103e1f7cb0f053af1f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_898711_library_m_book_transaction</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+            <sys_update_name>sys_ui_form_sections_1d832e22972611103e1f7cb0f053af1f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-18 04:50:26</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="task_editor" name="task_editor">0956f6390a0a0bc50064623d5d51c556</contains>
+        <role display_value="x_898711_library_m.librarian" name="x_898711_library_m.librarian">d0c28d4f971211103e1f7cb0f053afbb</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 06:08:15</sys_created_on>
+        <sys_id>e3bb255697a611103e1f7cb0f053af41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_editor.x_898711_library_m.librarian</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_user_role_contains_e3bb255697a611103e1f7cb0f053af41</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 06:08:15</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_user_role_contains_e3bb255697a611103e1f7cb0f053af41</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="task_editor" name="task_editor">0956f6390a0a0bc50064623d5d51c556</contains><role display_value="x_898711_library_m.librarian" name="x_898711_library_m.librarian">d0c28d4f971211103e1f7cb0f053afbb</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-17 06:08:15</sys_created_on><sys_id>e3bb255697a611103e1f7cb0f053af41</sys_id><sys_mod_count>0</sys_mod_count><sys_name>task_editor.x_898711_library_m.librarian</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_user_role_contains_e3bb255697a611103e1f7cb0f053af41</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-17 06:08:15</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>1861969004</payload_hash>
+        <record_name>task_editor.x_898711_library_m.librarian</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 06:08:15</sys_created_on>
+        <sys_id>6fbb655697a611103e1f7cb0f053afbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e48e9e7d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 06:08:15</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>27bb2556bfa611106b990909c510c546</update_guid>
+        <update_guid_history>27bb2556bfa611106b990909c510c546:1861969004</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 07:01:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>0476cce3e7af463282f8d8382dfe0224</sys_id>
+        <sys_metadata>e3bb255697a611103e1f7cb0f053af41</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_editor.x_898711_library_m.librarian</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_e3bb255697a611103e1f7cb0f053af41</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_e3bb255697a611103e1f7cb0f053af41">6fbb655697a611103e1f7cb0f053afbb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 07:01:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
