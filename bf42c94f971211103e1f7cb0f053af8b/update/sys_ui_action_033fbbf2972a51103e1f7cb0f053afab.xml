@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>cancel_transaction</action_name>
+        <action_name>return_the_books</action_name>
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.approval=='not requested' &amp;&amp; current.state==-5</condition>
+        <condition>current.approval=='approved' &amp;&amp; current.state==2</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -27,26 +27,26 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Cancel transaction</name>
-        <onclick>canceller()</onclick>
+        <name>Return books</name>
+        <onclick>return_books()</onclick>
         <order>100</order>
-        <script><![CDATA[//Client-side 'onclick' function
-function canceller(){
-	//Call the UI Action and skip the 'onclick' function
-	gsftSubmit(null, g_form.getFormElement(), 'cancel_transaction');
-	//MUST call the 'Action name' set in this UI Action
-}//Code that runs without 'onclick'
+        <script><![CDATA[function return_books() {
+    //Call the UI Action and skip the 'onclick' function
+    gsftSubmit(null, g_form.getFormElement(), 'return_the_books');
+    //MUST call the 'Action name' set in this UI Action
+} //Code that runs without 'onclick'
 
 //Ensure call to server-side function with no browser errors
-if(typeof window == 'undefined')
-	runBusRuleCode();
+if (typeof window == 'undefined')
+    runBusRuleCode();
 
 //Server-side function
-function runBusRuleCode(){
-	current.state = -1;
-	current.approval = 'rejected';
-	current.short_description="Rejected: Patron has cancelled this transaction.";
-	current.update();
+function runBusRuleCode() {
+    current.state = 4;
+	current.work_end=new GlideDateTime();
+    current.update();
+    gs.info('Successfully returned books');
+    // 	action.setRedirectURL(current);
 }]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -54,19 +54,19 @@ function runBusRuleCode(){
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-10-18 02:29:55</sys_created_on>
+        <sys_created_on>2022-10-19 06:11:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>881b79aa976211103e1f7cb0f053af20</sys_id>
-        <sys_mod_count>33</sys_mod_count>
-        <sys_name>Cancel transaction</sys_name>
+        <sys_id>033fbbf2972a51103e1f7cb0f053afab</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Return books</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
-        <sys_update_name>sys_ui_action_881b79aa976211103e1f7cb0f053af20</sys_update_name>
+        <sys_update_name>sys_ui_action_033fbbf2972a51103e1f7cb0f053afab</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-19 07:48:51</sys_updated_on>
+        <sys_updated_on>2022-10-19 06:20:19</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
