@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_898711_library_m.books record</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>books record</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-20 09:28:32</sys_created_on>
+        <sys_id>5b26b95397ae91103e1f7cb0f053afbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_898711_library_m.books record</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_user_role_5b26b95397ae91103e1f7cb0f053afbe</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:28:32</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_user_role_5b26b95397ae91103e1f7cb0f053afbe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_898711_library_m.books record</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix>books record</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>harold.yamo</sys_created_by><sys_created_on>2022-10-20 09:28:32</sys_created_on><sys_id>5b26b95397ae91103e1f7cb0f053afbe</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_898711_library_m.books record</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_user_role_5b26b95397ae91103e1f7cb0f053afbe</sys_update_name><sys_updated_by>harold.yamo</sys_updated_by><sys_updated_on>2022-10-20 09:28:32</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>-1496369485</payload_hash>
+        <record_name>x_898711_library_m.books record</record_name>
+        <reverted_from/>
+        <source>fa39101b972a91103e1f7cb0f053af85</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-20 09:28:32</sys_created_on>
+        <sys_id>be567d5397ae91103e1f7cb0f053af92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183f4b910900000001</sys_recorded_at>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:28:32</sys_updated_on>
+        <type>Role</type>
+        <update_guid>f6567d5323ae91105d3bc98cb7b20c92</update_guid>
+        <update_guid_history>f6567d5323ae91105d3bc98cb7b20c92:-1496369485</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_898711_library_m.books record">92cbb1a3976ed1103e1f7cb0f053af57</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-21 04:30:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>0fb8596d22ed40a09838ab06951b8900</sys_id>
+        <sys_metadata>5b26b95397ae91103e1f7cb0f053afbe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_898711_library_m.books record</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_user_role_5b26b95397ae91103e1f7cb0f053afbe</sys_update_name>
+        <sys_update_version display_value="sys_user_role_5b26b95397ae91103e1f7cb0f053afbe">be567d5397ae91103e1f7cb0f053af92</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-21 04:30:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

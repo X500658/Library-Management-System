@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Library Management System">9fe48583971211103e1f7cb0f053af40</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint>Allows users to return one or more borrowed books. </hint>
+        <homepage/>
+        <image/>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>Return Books</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>400</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id=68ae75a3976ed1103e1f7cb0f053afa6</query>
+        <report/>
+        <roles>x_898711_library_m.patron</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 05:00:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a7c8305797aa91103e1f7cb0f053afd6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Return Books</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_app_module_a7c8305797aa91103e1f7cb0f053afd6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-21 05:46:09</sys_updated_on>
+        <timeline_page/>
+        <title>Return Books</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

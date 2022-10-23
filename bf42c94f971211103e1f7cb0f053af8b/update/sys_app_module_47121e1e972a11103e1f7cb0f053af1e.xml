@@ -15,7 +15,7 @@
         <name/>
         <order>100</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>catalog_home.do?sysparm_catalog=7b79aed0976611103e1f7cb0f053af1e</query>
+        <query>/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id=7b79aed0976611103e1f7cb0f053af1e</query>
         <report/>
         <roles>x_898711_library_m.patron</roles>
         <sys_class_name>sys_app_module</sys_class_name>
@@ -24,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>47121e1e972a11103e1f7cb0f053af1e</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Borrow Books </sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_app_module_47121e1e972a11103e1f7cb0f053af1e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-19 02:27:04</sys_updated_on>
+        <sys_updated_on>2022-10-20 02:29:29</sys_updated_on>
         <timeline_page/>
         <title>Borrow Books </title>
         <uncancelable>false</uncancelable>

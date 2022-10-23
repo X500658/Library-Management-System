@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Book Transaction" max_length="40" name="x_898711_library_m_book_transaction" sizeclass="14" type="collection">
+    <element extends="task" label="Book Transaction" max_length="40" name="x_898711_library_m_book_transaction" sizeclass="20" type="collection">
         <element attributes="ref_auto_completer=AJAXReferenceChoice" choice="3" label="Borrowed books" mandatory="true" max_length="1024" name="borrowed_book" reference="x_898711_library_m_books" type="glide_list">
             <choice/>
         </element>
