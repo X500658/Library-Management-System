@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Prevent patrons with more than P100 overdue fee from borrowing books</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Overdue prevent</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	var x= CheckOverdue(g_user.userID());
+	alert('Display the count: '+x);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 01:31:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cc3f602897b251103e1f7cb0f053af66</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Overdue prevent</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_script_client_cc3f602897b251103e1f7cb0f053af66</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-24 04:46:29</sys_updated_on>
+        <table>x_898711_library_m_book_transaction</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_script_client_cc3f602897b251103e1f7cb0f053af66</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Prevent patrons with more than P100 overdue fee from borrowing books&lt;/description&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Overdue prevent&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	var x= CheckOverdue(g_user.userID());
+	alert('Display the count: '+x);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-24 01:31:39&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;cc3f602897b251103e1f7cb0f053af66&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;Overdue prevent&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_cc3f602897b251103e1f7cb0f053af66&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-24 04:46:29&lt;/sys_updated_on&gt;&lt;table&gt;x_898711_library_m_book_transaction&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>408145952</payload_hash>
+        <record_name>Overdue prevent</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 04:46:29</sys_created_on>
+        <sys_id>422cd960977651103e1f7cb0f053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184085046110000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-24 04:46:29</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>392cd960c77651100b647ff2e1a5e994</update_guid>
+        <update_guid_history>392cd960c77651100b647ff2e1a5e994:408145952,a56ff824e9f2511098c28a9eb9994486:456166229,2c2cf4e07af2511026bc82bb9d9e44e0:-290214505,8fd634ece4b251104e8f004275a892b3:1661306571,cab6f4ec97b2511030a1a2ab87e0237d:-36120535,1386f4a8e0b2511056c9ee04712b864e:-488613826,41d5f4acf3b25110d6236d908c1bbcfd:506600601,f741f0a840b2511048561c6819d03f02:1796610081,5d11fc6895b251106ed145616ee2e2b4:-1019436015,29e07c68cfb251109d3d2ba374b1abce:-1059495162,2690f068aeb251107b4740890551b5ab:-1701217526,e8707068bcb25110c9dea21c787e2dad:-1817121116,1e40f068fcb2511097efcf3cddccd274:1059987652,43203068c6b2511033edb7409c0d5bc9:1396808433,8acfe4283eb251106f9cc9890b3137e6:1129921946,7f8f2864c4b25110a30792dd818318b3:1785291114</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 04:51:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>925dfbac05fb4aaeaff60c3af8fa50f9</sys_id>
+        <sys_metadata>cc3f602897b251103e1f7cb0f053af66</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Overdue prevent</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent display_value="Book Transaction">5d311d80976611103e1f7cb0f053afe6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_script_client_cc3f602897b251103e1f7cb0f053af66</sys_update_name>
+        <sys_update_version display_value="sys_script_client_cc3f602897b251103e1f7cb0f053af66">422cd960977651103e1f7cb0f053af95</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-24 04:51:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
