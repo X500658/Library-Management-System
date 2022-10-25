@@ -3,12 +3,13 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Hide approval options meant not meant for the user</description>
+        <description>Hide approval options meant not meant for the user&#13;
+defaults currency to PHP</description>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Hide options</name>
+        <name>Hide options and set to PHP</name>
         <order/>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
@@ -21,6 +22,12 @@
 		//hide from patrons
 		g_form.removeOption('approval', 'requested');
 	}
+	if(g_form.getValue('u_field_name_2')=='USD;0' || g_form.getValue('u_field_name_2')=='USD;0.00'){
+		g_form.clearValue('u_field_name_2');
+		g_form.setValue('u_field_name_2', 'PHP;0');
+// 	}else{
+// 		alert(g_form.getValue('u_field_name_2'));
+	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -28,15 +35,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>934b612a972211103e1f7cb0f053af99</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>Hide options</sys_name>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Hide options and set to PHP</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_client_934b612a972211103e1f7cb0f053af99</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-18 06:27:31</sys_updated_on>
+        <sys_updated_on>2022-10-25 04:36:02</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

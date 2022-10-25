@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>cancel_transaction</action_name>
+        <action_name>deletion</action_name>
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.approval=='not requested' &amp;&amp; current.state==-5</condition>
+        <condition>current.status!='deleted'</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
         <form_context_menu>true</form_context_menu>
         <form_link>true</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
-        <form_style/>
+        <form_style>destructive</form_style>
         <format_for_configurable_workspace>false</format_for_configurable_workspace>
         <hint/>
         <isolate_script>true</isolate_script>
@@ -27,13 +27,13 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Cancel transaction</name>
-        <onclick>canceller()</onclick>
+        <name>Delete book</name>
+        <onclick>deleter()</onclick>
         <order>100</order>
         <script><![CDATA[//Client-side 'onclick' function
-function canceller(){
+function  deleter(){
 	//Call the UI Action and skip the 'onclick' function
-	gsftSubmit(null, g_form.getFormElement(), 'cancel_transaction');
+	gsftSubmit(null, g_form.getFormElement(), 'deletion');
 	//MUST call the 'Action name' set in this UI Action
 }//Code that runs without 'onclick'
 
@@ -43,10 +43,8 @@ if(typeof window == 'undefined')
 
 //Server-side function
 function runBusRuleCode(){
-	current.state = -1;
-// 	current.active = false;
-	current.approval = 'rejected';
-	current.short_description="Rejected: Patron has cancelled this transaction.";
+// 	current.active=false;
+	current.status='deleted';
 	current.update();
 }]]></script>
         <show_insert>false</show_insert>
@@ -55,20 +53,20 @@ function runBusRuleCode(){
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-10-18 02:29:55</sys_created_on>
+        <sys_created_on>2022-10-25 06:25:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>881b79aa976211103e1f7cb0f053af20</sys_id>
-        <sys_mod_count>34</sys_mod_count>
-        <sys_name>Cancel transaction</sys_name>
+        <sys_id>95457630977a91103e1f7cb0f053af29</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Delete book</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
-        <sys_update_name>sys_ui_action_881b79aa976211103e1f7cb0f053af20</sys_update_name>
+        <sys_update_name>sys_ui_action_95457630977a91103e1f7cb0f053af29</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-25 07:45:22</sys_updated_on>
-        <table>x_898711_library_m_book_transaction</table>
+        <sys_updated_on>2022-10-25 06:40:34</sys_updated_on>
+        <table>x_898711_library_m_books</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
     </sys_ui_action>
