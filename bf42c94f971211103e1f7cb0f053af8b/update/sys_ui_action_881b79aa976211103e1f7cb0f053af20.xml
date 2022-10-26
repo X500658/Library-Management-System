@@ -43,7 +43,7 @@ if(typeof window == 'undefined')
 
 //Server-side function
 function runBusRuleCode(){
-	current.state = -1;
+	current.state = 8;
 // 	current.active = false;
 	current.approval = 'rejected';
 	current.short_description="Rejected: Patron has cancelled this transaction.";
@@ -59,7 +59,7 @@ function runBusRuleCode(){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>881b79aa976211103e1f7cb0f053af20</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Cancel transaction</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -67,7 +67,7 @@ function runBusRuleCode(){
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_ui_action_881b79aa976211103e1f7cb0f053af20</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-25 07:45:22</sys_updated_on>
+        <sys_updated_on>2022-10-26 00:35:38</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
