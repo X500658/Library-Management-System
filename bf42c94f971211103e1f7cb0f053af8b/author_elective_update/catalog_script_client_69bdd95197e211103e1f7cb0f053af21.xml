@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>false</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Borrow Books">7b79aed0976611103e1f7cb0f053af1e</cat_item>
+        <cat_variable/>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Assign selected books</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+    var books=g_form.getValue('selected_books');
+	var titles=books.split(',');
+	var listed_titles=[];
+	for(var i=0; i<titles.length;i++){
+		var getBorrowedBooks = new GlideAjax('GetBorrowedBooks');
+		getBorrowedBooks.addParam('sysparm_name','getBooks');
+		getBorrowedBooks.addParam('sysparm_sys_id', titles[i]);
+		getBorrowedBooks.getXML(populateListField);
+		
+		function populateListField(response){
+			var extractedBook = response.responseXML.documentElement.getAttribute("answer");
+			listed_titles.push(extractedBook);
+			g_form.clearValue('borrowed_book');
+			g_form.setValue('borrowed_book',listed_titles.join(', '));
+		}
+	}
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-14 02:39:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69bdd95197e211103e1f7cb0f053af21</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Assign selected books</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>catalog_script_client_69bdd95197e211103e1f7cb0f053af21</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 05:55:53</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>catalog_script_client_69bdd95197e211103e1f7cb0f053af21</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_script_client"&gt;&lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;false&lt;/applies_target_record&gt;&lt;applies_to&gt;item&lt;/applies_to&gt;&lt;cat_item display_value="Borrow Books"&gt;7b79aed0976611103e1f7cb0f053af1e&lt;/cat_item&gt;&lt;cat_variable/&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Assign selected books&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+    var books=g_form.getValue('selected_books');
+	var titles=books.split(',');
+	var listed_titles=[];
+	for(var i=0; i&lt;titles.length;i++){
+		var getBorrowedBooks = new GlideAjax('GetBorrowedBooks');
+		getBorrowedBooks.addParam('sysparm_name','getBooks');
+		getBorrowedBooks.addParam('sysparm_sys_id', titles[i]);
+		getBorrowedBooks.getXML(populateListField);
+		
+		function populateListField(response){
+			var extractedBook = response.responseXML.documentElement.getAttribute("answer");
+			listed_titles.push(extractedBook);
+			g_form.clearValue('borrowed_book');
+			g_form.setValue('borrowed_book',listed_titles.join(', '));
+		}
+	}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-14 02:39:09&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;69bdd95197e211103e1f7cb0f053af21&lt;/sys_id&gt;&lt;sys_mod_count&gt;55&lt;/sys_mod_count&gt;&lt;sys_name&gt;Assign selected books&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_script_client_69bdd95197e211103e1f7cb0f053af21&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-27 05:55:53&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;variable_set/&gt;&lt;view/&gt;&lt;/catalog_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1835426529</payload_hash>
+        <record_name>Assign selected books</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 05:55:53</sys_created_on>
+        <sys_id>04d8856d973a51103e1f7cb0f053afac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841802e5bc0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 05:55:53</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>4cd8016d8a3a5110502ef13ee503e55a</update_guid>
+        <update_guid_history>4cd8016d8a3a5110502ef13ee503e55a:-1835426529,0ee48de5a13a51109077d810985f6516:-1209109814,8852ce2baa6ed110371b4b312126da61:1508317741,9953169e4f2a1110b27f9d05f47bf4e6:-1461700436,1a38de1995a611100cf99ca53eb8017a:-2056865572,8807de198aa611103326c79edf077012:-2011978779,5686da959ba61110fb89d7e63752b48a:-1564815617,c9d4d29564a61110430a25dfb3fa8fdc:-158149287,d8edce9dc7661110363b287527c5dc8e:-578518901,c39d8addbb66111014750ce6ed41d333:-413407438,f21d4addc6661110d64a59814b8a3ad0:1504779333,e9dcce9dc5661110bda97e84ea5691bd:-24666633,437c82d98e6611103e9cc1a42d3d0187:-111559551,a49b429de5661110cd4abf357386670a:43965793,4ab7469909661110da120ce0ccf6c5eb:-1027361164,49b64259e9661110d34cd4c02aff6b97:884803539,0bf0cad1f06611100b19f173be5b7a17:-401178903,c24046d1156611108ed9e82ce56aaec7:-1439730126,627ff191cd661110a090f3eae050627d:-806972902,630fb151bd6611109694827995241399:-689287611,1dcd7911936611100bee250a0859c789:-1439730126,e64df5113f6611108a49441c423af857:-2110741736,2508bd99fd2611101c233570a69079a8:1257556164,63c735d9e826111008b3c0b11433f644:-824988144,4d87bd59b42611109d75344469ae0acd:2126148421,bf57bd190926111015529af4ae0bc616:-68517024,9e47f5199726111020af3da2fc52cf99:860584609,a87be9dd2ce2111026e60d8e3303731d:675384833,e76bad5de0e211103bf7dea353939349:1637226827,ec1badd93de21110dbd5b3bd7adaa406:-816174698,2549e95d06e211109221a10bdb94f6e0:-1522241859,a319a15db5e2111085194b54b5a41af2:177856273,61a8add978e211101c69df9ffabf31a3:-1848370728,3688651d6ae2111089d0dbc4f9597d94:946964984,3437619953e21110a73414e14c6ba5af:-1435479764,72276dd9ade21110f7c5fbd03ee882b0:398262526,0ce6a599aee2111022c7082d0a1662d5:-1221500698,4a962999e6e21110c01424f516855b6d:-1537316775,c665a9596be211109df67b034b925cd5:128140036,5cf46559cae2111033d92817ace4de03:1791218075,ff84a519eee21110d8bf70cb4f7ea3ab:-2017407649,fa932519b4e2111000d769b9325b7892:443482702,d263e11963e211109d9f4b5f96958e01:701372580,8a03e5d5abe21110993f3b5b5fa7810f:-1574740163,04032dd513e21110b8bab8c410902534:1814788654,d6a225d545e21110a2dd74d60f9c1e73:-1930757998,9772e995e6e21110d14b24d9c9724a2d:1247836034,3df1a995c2e21110628baa63be5b5c24:-6812822,9dd12195c5e21110db40cd579c0bcd49:-628485023,5441ed55b0e211107d4452e6382ad44a:-336248071,d0e0e155a4e21110965537bd74461c06:-409391000,b970615516e211104dbc01ebcd834e28:-1355623693,df30e515fce21110a25ee6b0de7234b4:-317216327,f4bf11155ae2111028ee5fffb2d9e090:-1636519333,1caf11159ce21110273e5d6e6435758b:673229517,4f1fd11127e21110cda60f8080f088cc:1847219966</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Assign selected books">998d4961977a51103e1f7cb0f053af9e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 06:16:28</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>624274ad06594a50a2100a72c51761a4</sys_id>
+        <sys_metadata>69bdd95197e211103e1f7cb0f053af21</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign selected books</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>catalog_script_client_69bdd95197e211103e1f7cb0f053af21</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_69bdd95197e211103e1f7cb0f053af21">04d8856d973a51103e1f7cb0f053afac</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 06:16:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

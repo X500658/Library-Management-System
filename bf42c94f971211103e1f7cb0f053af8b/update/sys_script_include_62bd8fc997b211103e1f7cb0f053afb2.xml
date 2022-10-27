@@ -2,47 +2,44 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_898711_library_m.PatronOverdueTotal</api_name>
+        <api_name>x_898711_library_m.UserLimits</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
-        <description>Returns the Patron's total overdue fee</description>
-        <name>PatronOverdueTotal</name>
-        <script><![CDATA[var PatronOverdueTotal = Class.create();
-PatronOverdueTotal.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-    total: function() {
-			var books = new GlideAggregate('x_898711_library_m_book_transaction');
-			books.addQuery('u_field_name_1', gs.getUserID());
-			books.addAggregate('SUM', 'u_field_name_2');
-			books.query();
-			var x=0;
-		
-			while (books.next()) {
-				x++;
-// 				gs.info(books.getAggregate('SUM', 'u_field_name_2'));
-// 				return books.getAggregate('SUM', 'u_field_name_2');
-				
-// 				var patron = new GlideRecord('sys_user');
-// 				patron.addQuery('sys_id', books.getValue('u_field_name_1'));
-// 				patron.query();
-// 				patron.next();
-			
-// 				conv.setAmount((books.getAggregate('SUM', 'u_field_name_2')!='')?books.getAggregate('SUM', 'u_field_name_2'):0);
-			}
-		return x;
+        <description>Returns the Patron's total overdue fee or the Librarian's total number of ongoing transactions</description>
+        <name>UserLimits</name>
+        <script><![CDATA[var UserLimits = Class.create();
+UserLimits.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    PatronTotal: function() {
+		var books = new GlideAggregate('x_898711_library_m_book_transaction');
+		books.groupBy('u_field_name_1');
+		books.addQuery('u_field_name_1', gs.getUserID());
+		books.addAggregate('SUM', 'u_field_name_2');
+		books.query();
+		books.next();
+		return parseFloat(books.getAggregate('SUM', 'u_field_name_2'));
     },
-    type: 'PatronOverdueTotal'
+	LibrarianLimit: function (){
+		var transactions = new GlideAggregate('x_898711_library_m_book_transaction');
+		transactions.addQuery('assigned_to', gs.getUserID());
+		transactions.addAggregate('COUNT', 'assigned_to');
+		transactions.query();
+		gs.info("testing2");
+		transactions.next();
+		return transactions.getAggregate('COUNT', 'assigned_to');
+	},
+    type: 'UserLimits'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-10-26 02:31:41</sys_created_on>
         <sys_id>62bd8fc997b211103e1f7cb0f053afb2</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>PatronOverdueTotal</sys_name>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>UserLimits</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_include_62bd8fc997b211103e1f7cb0f053afb2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-26 09:10:10</sys_updated_on>
+        <sys_updated_on>2022-10-27 06:33:19</sys_updated_on>
     </sys_script_include>
 </record_update>
