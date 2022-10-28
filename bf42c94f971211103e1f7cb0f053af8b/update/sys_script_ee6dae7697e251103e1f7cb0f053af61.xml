@@ -34,7 +34,7 @@
 	// Add your code here
 	var array = current.borrowed_book.split(",");
 	var rej = false;
-	var list;
+	var list=[];
 	for(var i=0; i<array.length;i++){ //check availability
 		var books = new GlideRecord('x_898711_library_m_books');
 		books.addQuery('sys_id', array[i]);
@@ -42,19 +42,27 @@
 		while(books.next()){
 			if(books.available_copies==0){
 				rej=true;
-				list.push(array[i]);
+				list.push(books.title);
 				
 			}
 		}
 	}
-	gs.info("Book: "+list);
+	
+	var present = new GlideRecord('x_898711_library_m_book_transaction');
+	present.addQuery('number', current.number);
+	present.query();
+	present.next();
+// 	gs.info("Book: "+list+ "\nNum: " +current.number+ "\nUser: " +present.u_field_name_1+ "\nAppro: " +present.approval);
+	
 	if(rej==true){
 		gs.info('rejected dapat');
-// 		current.approval='rejected';
-// 		current.state=4;
-// 		current.short_description="System has rejected this transaction. \nUnavailable books: " + list.join(", "); 
+		present.approval='rejected';
+		present.state=4;
+		present.short_description="System has rejected this transaction. \nUnavailable books: " + list.join(", "); 
+		present.update();
+		gs.info("Book: "+list+ "\nNum: " +current.number+ "\nUser: " +present.u_field_name_1+ "\nAppro: " +present.approval+ "\nDesc: System has rejected this transaction. Unavailable books: " + list.join(", "));
 	}else{
-		gs.info('plz proceed');
+		gs.info('plz proceed \nTransaction:' +current.number);
 // 		for(i=0; i<array.length;i++){
 // // 			gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
 // 			books = new GlideRecord('x_898711_library_m_books');
@@ -74,7 +82,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ee6dae7697e251103e1f7cb0f053af61</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>Subtract availability</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -82,7 +90,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_ee6dae7697e251103e1f7cb0f053af61</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-28 04:41:36</sys_updated_on>
+        <sys_updated_on>2022-10-28 08:38:32</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
