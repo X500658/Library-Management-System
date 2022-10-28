@@ -28,7 +28,7 @@
         <rest_service/>
         <rest_service_text/>
         <rest_variables/>
-        <role_conditions>x_898711_library_m.head_librarian</role_conditions>
+        <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Add your code here
@@ -43,25 +43,29 @@
 			if(books.available_copies==0){
 				rej=true;
 				list.push(array[i]);
+				
 			}
 		}
 	}
+	gs.info("Book: "+list);
 	if(rej==true){
-		current.approval='rejected';
-		current.state=4;
-		current.short_description="System has rejected this transaction. \nUnavailable books: " + list.join(", "); 
+		gs.info('rejected dapat');
+// 		current.approval='rejected';
+// 		current.state=4;
+// 		current.short_description="System has rejected this transaction. \nUnavailable books: " + list.join(", "); 
 	}else{
-		for(i=0; i<array.length;i++){
-// 			gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
-			books = new GlideRecord('x_898711_library_m_books');
-			books.addQuery('sys_id', array[i]);
-			books.query();
-			while(books.next()){
-				books.setValue('available_copies',(books.available_copies-1));
-				books.update();
-// 				gs.info(books.title+ " updated to" +books.available_copies +" available copies");
-			}
-		}
+		gs.info('plz proceed');
+// 		for(i=0; i<array.length;i++){
+// // 			gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
+// 			books = new GlideRecord('x_898711_library_m_books');
+// 			books.addQuery('sys_id', array[i]);
+// 			books.query();
+// 			while(books.next()){
+// 				books.setValue('available_copies',(books.available_copies-1));
+// 				books.update();
+// // 				gs.info(books.title+ " updated to" +books.available_copies +" available copies");
+// 			}
+// 		}
 	}
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -70,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ee6dae7697e251103e1f7cb0f053af61</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>Subtract availability</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -78,7 +82,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_ee6dae7697e251103e1f7cb0f053af61</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-26 05:05:18</sys_updated_on>
+        <sys_updated_on>2022-10-28 04:41:36</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

@@ -10,7 +10,9 @@
         <messages/>
         <name>onChange Approve</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+        <script><![CDATA[function onSubmit() {
+   //Type appropriate comment here, and begin script below
+   function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (isLoading || newValue === '') {
       return;
    }
@@ -37,6 +39,7 @@
 			g_form.setValue('due_date', date, date);
 		}
 	}
+}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -44,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ec34e662972611103e1f7cb0f053afec</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>onChange Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -52,7 +55,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_client_ec34e662972611103e1f7cb0f053afec</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-25 06:29:48</sys_updated_on>
+        <sys_updated_on>2022-10-28 03:01:09</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
