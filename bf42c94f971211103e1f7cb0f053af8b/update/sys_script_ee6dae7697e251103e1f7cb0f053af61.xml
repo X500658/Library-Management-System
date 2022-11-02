@@ -12,12 +12,10 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_898711_library_m_book_transaction</collection>
-        <condition/>
+        <condition>current.approval=="approved" &amp;&amp; previous.approval!="approved"</condition>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_898711_library_m_book_transaction">approval=approved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </filter_condition>
+        <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
         <name>Subtract availability</name>
@@ -40,40 +38,51 @@
 		books.addQuery('sys_id', array[i]);
 		books.query();
 		while(books.next()){
-			if(books.available_copies==0){
+			if(books.available_copies==0 || books.status=='deleted'){
 				rej=true;
 				list.push(books.title);
-				
 			}
 		}
 	}
-	
-	var present = new GlideRecord('x_898711_library_m_book_transaction');
-	present.addQuery('number', current.number);
-	present.query();
-	present.next();
 // 	gs.info("Book: "+list+ "\nNum: " +current.number+ "\nUser: " +present.u_field_name_1+ "\nAppro: " +present.approval);
 	
 	if(rej==true){
-		gs.info('rejected dapat');
+		var present = new GlideRecord('x_898711_library_m_book_transaction');
+		present.addQuery('number', current.number);
+		present.query();
+		present.next();
+// 		gs.info('rejected dapat');
 		present.approval='rejected';
 		present.state=4;
-		present.short_description="System has rejected this transaction. \nUnavailable books: " + list.join(", "); 
+		present.short_description="System has rejected this transaction. Unavailable book/s: " + list.join(", "); 
 		present.update();
-		gs.info("Book: "+list+ "\nNum: " +current.number+ "\nUser: " +present.u_field_name_1+ "\nAppro: " +present.approval+ "\nDesc: System has rejected this transaction. Unavailable books: " + list.join(", "));
+		gs.info("Book: "+list+ "\nNum: " +current.number+ "\nUser: " +present.u_field_name_1+ "\nAppro: " +present.approval+ "\nDesc: System has rejected this transaction. Unavailable book/s: " + list.join(", "));
+		
 	}else{
-		gs.info('plz proceed \nTransaction:' +current.number);
-// 		for(i=0; i<array.length;i++){
-// // 			gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
-// 			books = new GlideRecord('x_898711_library_m_books');
-// 			books.addQuery('sys_id', array[i]);
-// 			books.query();
-// 			while(books.next()){
-// 				books.setValue('available_copies',(books.available_copies-1));
-// 				books.update();
-// // 				gs.info(books.title+ " updated to" +books.available_copies +" available copies");
-// 			}
-// 		}
+// 		gs.info('plz proceed \nTransaction:' +current.number);
+		var present2 = new GlideRecord('x_898711_library_m_book_transaction');
+		present2.addQuery('number', current.number);
+		present2.query();
+		present2.next();
+		gdt= new GlideDateTime();
+		gdt2= new GlideDateTime();
+		gdt2.addDaysLocalTime(7);
+		present2.work_start = gdt;
+		present2.due_date = gdt2;
+		present2.state=2;
+		present2.update();
+		
+		for(i=0; i<array.length;i++){
+// 			gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
+			books = new GlideRecord('x_898711_library_m_books');
+			books.addQuery('sys_id', array[i]);
+			books.query();
+			while(books.next()){
+				books.setValue('available_copies',(books.available_copies-1));
+				books.update();
+				gs.info("Borrowed book: " +books.title+ ", updated to " +books.available_copies +" available copies");
+			}
+		}
 	}
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -82,7 +91,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ee6dae7697e251103e1f7cb0f053af61</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>Subtract availability</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -90,7 +99,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_ee6dae7697e251103e1f7cb0f053af61</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-28 08:38:32</sys_updated_on>
+        <sys_updated_on>2022-11-02 05:52:11</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

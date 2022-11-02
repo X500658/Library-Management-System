@@ -43,10 +43,29 @@ if(typeof window == 'undefined')
 
 //Server-side function
 function runBusRuleCode(){
-// 	current.active=false;
-	current.available_copies=0;
-	current.status='deleted';
-	current.update();
+	var borrow = new GlideRecord('x_898711_library_m_book_transaction');
+	borrow.addQuery('borrowed_book', 'CONTAINS', current.title);
+	borrow.addEncodedQuery('state=-5^ORstate=2');
+	borrow.query();
+	gs.info("Records: " +borrow.getRowCount());
+	if(borrow.getRowCount()>0){
+		gs.addErrorMessage("Cannot delete book, currently being borrowed.");
+		action.setRedirectURL(current);
+	}else{
+		current.active=false;
+		current.available_copies=0;
+		current.status='deleted';
+		current.update();
+	}
+	
+// 	var BookDates2 = new GlideAjax('BookDates');
+// 		BookDates2.addParam('sysparm_name','getDueDate');
+// 		BookDates2.getXML(populateListField2);
+
+// 	function populateListField(response){
+// 		var date = response.responseXML.documentElement.getAttribute("answer");
+		
+// 	}
 }]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -58,7 +77,7 @@ function runBusRuleCode(){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>95457630977a91103e1f7cb0f053af29</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Delete book</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -66,7 +85,7 @@ function runBusRuleCode(){
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_ui_action_95457630977a91103e1f7cb0f053af29</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-27 05:41:41</sys_updated_on>
+        <sys_updated_on>2022-11-02 09:58:36</sys_updated_on>
         <table>x_898711_library_m_books</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
