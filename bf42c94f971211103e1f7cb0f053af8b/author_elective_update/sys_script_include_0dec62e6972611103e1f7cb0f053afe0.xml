@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_898711_library_m.BookDates</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>generate start and due dates for book transactions</description>
+        <name>BookDates</name>
+        <script><![CDATA[var BookDates = Class.create();
+BookDates.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getStartDate: function() {
+		return new GlideDateTime();
+	},
+	getDueDate: function() {
+		var gdt= new GlideDateTime();
+		gdt.addDaysLocalTime(7);
+		return gdt;
+	},
+    type: 'BookDates'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-18 05:33:17</sys_created_on>
+        <sys_id>0dec62e6972611103e1f7cb0f053afe0</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>BookDates</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_script_include_0dec62e6972611103e1f7cb0f053afe0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-02 01:02:09</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_script_include_0dec62e6972611103e1f7cb0f053afe0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_898711_library_m.BookDates&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;generate start and due dates for book transactions&lt;/description&gt;&lt;name&gt;BookDates&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var BookDates = Class.create();
+BookDates.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getStartDate: function() {
+		return new GlideDateTime();
+	},
+	getDueDate: function() {
+		var gdt= new GlideDateTime();
+		gdt.addDaysLocalTime(7);
+		return gdt;
+	},
+    type: 'BookDates'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-18 05:33:17&lt;/sys_created_on&gt;&lt;sys_id&gt;0dec62e6972611103e1f7cb0f053afe0&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;BookDates&lt;/sys_name&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_0dec62e6972611103e1f7cb0f053afe0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-02 01:02:09&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1135563849</payload_hash>
+        <record_name>BookDates</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-02 01:02:09</sys_created_on>
+        <sys_id>ef1f7e1797f611103e1f7cb0f053afbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18435dc1f750000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-02 01:02:09</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>e71f7e170af61110bb52aeeb822677bd</update_guid>
+        <update_guid_history>e71f7e170af61110bb52aeeb822677bd:-1135563849,ae3c5b2aaee6111024c0c6d7e6a7493c:-1610109848,a44b8be64ca611106b5870fac86d0021:333940450,c81a43a64aa61110657294972c665bbf:-948821887,76460fa21aa61110316ee18cd3626433:-795365297,48b58b62b8a611103c6ad1fb7e8029d0:-948821887,4f63cbee7e661110c1017589f0d4e45f:147164168,06bdfa6a9c661110e27db2f73738d48b:-1880607852,621d3a2ab2661110bba7b9fea80fd21b:1843925385,da9b36a66d66111080fd23dc61dcdcff:514053994,9238ba26d06611109f839289d8f5b280:-118177145,ebf7ba26c66611108a668e43973eec47:-1544603486,50c7b6267d661110640e3078c6e20f5a:-1246983193,1e7feaea0d261110b22aed6978cd85db:354825658,753f2eaa68261110f3d3864cc3682d5f:1952373926,bb5e2eaa0f261110201fff52b603f87c:1775210719,f0cda66aa7261110aff183a6462fffb0:-534873534,895d2e6a47261110bafa1fa6df347cd5:-1987037796</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 00:54:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2d81f764b691441e89ac738c48e5c3a4</sys_id>
+        <sys_metadata>0dec62e6972611103e1f7cb0f053afe0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BookDates</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_script_include_0dec62e6972611103e1f7cb0f053afe0</sys_update_name>
+        <sys_update_version display_value="sys_script_include_0dec62e6972611103e1f7cb0f053afe0">ef1f7e1797f611103e1f7cb0f053afbd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 00:54:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

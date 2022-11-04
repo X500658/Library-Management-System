@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Import_Books" max_length="40" name="x_898711_library_m_import_books" sizeclass="36" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Author" label="Author" max_length="40" name="u_author" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Genre" label="Genre" max_length="40" name="u_genre" type="string"/>
+        <element attributes="import_attribute_name=Height" label="Height" max_length="40" name="u_height" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Publisher" label="Publisher" max_length="40" name="u_publisher" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=SubGenre" label="SubGenre" max_length="40" name="u_subgenre" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Title" label="Title" max_length="42" name="u_title" type="string"/>
+    </element>
+</database>

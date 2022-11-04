@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="genre" table="x_898711_library_m_books" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>genre</element>
+            <name>x_898711_library_m_books</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>harold.yamo</sys_created_by>
+            <sys_created_on>2022-11-03 04:52:13</sys_created_on>
+            <sys_id>1b5df8b7973611103e1f7cb0f053afbd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>genre</sys_name>
+            <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+            <sys_update_name>sys_choice_x_898711_library_m_books_genre</sys_update_name>
+            <sys_updated_by>harold.yamo</sys_updated_by>
+            <sys_updated_on>2022-11-03 04:52:13</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genre</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>nonfiction</label>
+            <language>en</language>
+            <name>x_898711_library_m_books</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>harold.yamo</sys_created_by>
+            <sys_created_on>2022-11-03 04:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>575df8b7973611103e1f7cb0f053afdf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harold.yamo</sys_updated_by>
+            <sys_updated_on>2022-11-03 04:52:13</sys_updated_on>
+            <value>nonfiction</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genre</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>science</label>
+            <language>en</language>
+            <name>x_898711_library_m_books</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>harold.yamo</sys_created_by>
+            <sys_created_on>2022-11-03 04:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d35df8b7973611103e1f7cb0f053afc3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harold.yamo</sys_updated_by>
+            <sys_updated_on>2022-11-03 04:52:13</sys_updated_on>
+            <value>science</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>genre</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tech</label>
+            <language>en</language>
+            <name>x_898711_library_m_books</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>harold.yamo</sys_created_by>
+            <sys_created_on>2022-11-03 04:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9f5df8b7973611103e1f7cb0f053afbc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harold.yamo</sys_updated_by>
+            <sys_updated_on>2022-11-03 04:52:13</sys_updated_on>
+            <value>tech</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Import Sets">import_sets</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Test</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_898711_library_m_test</name>
+        <order>1100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-03 04:46:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>711cb477973611103e1f7cb0f053af71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_app_module_711cb477973611103e1f7cb0f053af71</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-03 04:46:39</sys_updated_on>
+        <timeline_page/>
+        <title>Test</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_app_module_711cb477973611103e1f7cb0f053af71</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Import Sets">import_sets</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Test</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_898711_library_m_test</name><order>1100</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>harold.yamo</sys_created_by><sys_created_on>2022-11-03 04:46:39</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>711cb477973611103e1f7cb0f053af71</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Test</sys_name><sys_overrides/><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_app_module_711cb477973611103e1f7cb0f053af71</sys_update_name><sys_updated_by>harold.yamo</sys_updated_by><sys_updated_on>2022-11-03 04:46:39</sys_updated_on><timeline_page/><title>Test</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-653857514</payload_hash>
+        <record_name>Test</record_name>
+        <reverted_from/>
+        <source>148abceb97be11103e1f7cb0f053aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-03 04:46:39</sys_created_on>
+        <sys_id>711cb477973611103e1f7cb0f053af74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843bd004740000001</sys_recorded_at>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-03 04:46:39</sys_updated_on>
+        <type>Module</type>
+        <update_guid>b91cb477fa361110a5cf31fe5cbf0f73</update_guid>
+        <update_guid_history>b91cb477fa361110a5cf31fe5cbf0f73:-653857514</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Test">31a689ff973611103e1f7cb0f053af44</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-03 05:32:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>33807fd1e372473b8ce4f1678b041421</sys_id>
+        <sys_metadata>711cb477973611103e1f7cb0f053af71</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_app_module_711cb477973611103e1f7cb0f053af71</sys_update_name>
+        <sys_update_version display_value="sys_app_module_711cb477973611103e1f7cb0f053af71">711cb477973611103e1f7cb0f053af74</sys_update_version>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-03 05:32:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
