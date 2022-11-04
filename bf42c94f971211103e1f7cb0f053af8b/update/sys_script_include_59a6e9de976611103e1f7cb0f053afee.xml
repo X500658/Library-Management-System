@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_898711_library_m.GetBorrowedBooks</api_name>
         <caller_access/>
@@ -27,8 +27,15 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 		var borrow = new GlideRecord('x_898711_library_m_book_transaction');
 		borrow.addQuery('borrowed_book', 'CONTAINS', bookTitle);
 		borrow.addEncodedQuery('state=-5^ORstate=2');
+// 		borrowed_bookLIKEffd42550976211103e1f7cb0f053af48^state=-5^ORstate=2
+// 		borrowed_bookLIKEffd42550976211103e1f7cb0f053af48
+// 		ffd42550976211103e1f7cb0f053af48
 		borrow.query();
-		gs.info("SIserver Records: " +borrow.getRowCount()+ "\nTitle: " +bookTitle);
+// 		gs.info("SIserver Records: " +borrow.getRowCount()+ "\nnum: " +borrow.number);
+// 		while(borrow.hasNext()){
+// 			gs.info("SIserver Records: " +borrow.getRowCount()+ "\nnum: " +borrow.number);	
+// 		}
+// 		gs.info("SIserver Records: " +borrow.getRowCount()+ "\nTitle: " +bookTitle);
 		return borrow.getRowCount();
 	},
     type:'GetBorrowedBooks'
@@ -37,13 +44,13 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-10-17 05:47:26</sys_created_on>
         <sys_id>59a6e9de976611103e1f7cb0f053afee</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>GetBorrowedBooks</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_include_59a6e9de976611103e1f7cb0f053afee</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-03 04:50:23</sys_updated_on>
+        <sys_updated_on>2022-11-04 11:04:14</sys_updated_on>
     </sys_script_include>
 </record_update>

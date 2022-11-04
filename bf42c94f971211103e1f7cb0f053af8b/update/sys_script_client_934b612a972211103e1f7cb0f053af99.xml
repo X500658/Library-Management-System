@@ -15,7 +15,6 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
 	if(g_form.isNewRecord()){
-// 		alert("mew!");
 		var patron = new GlideAjax('Limits');
 		patron.addParam('sysparm_name','PatronTotal');
 		patron.getXML(populateListField2);
@@ -23,14 +22,7 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
 		function populateListField2(response){
 			var answer2 = response.responseXML.documentElement.getAttribute("answer");
 			if(answer2>=2){
-				alert("Cannot borrow more books. Please settle your overdue fee of $" +answer2+ ".\nSubmit button will be hidden until then.");
 				block();
-				var items = $$('BUTTON').each(function(item){
-// 					if(item.innerHTML.indexOf('Submit') > -1){
-// 						item.hide();
-// 					}
-					alert(JSON.stringify(item.innerHTML));
-				});
 			}
 		}
 	}else{
@@ -39,14 +31,13 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
 			g_form.removeOption('approval', 'approved');
 			g_form.removeOption('approval', 'rejected');
 
-			var limit = new GlideAjax('Limits');
-			limit.addParam('sysparm_name','LibrarianLimit');
-			limit.getXML(populateListField);
+			var librarian = new GlideAjax('Limits');
+			librarian.addParam('sysparm_name','LibrarianLimit');
+			librarian.getXML(populateListField);
 
 			function populateListField(response){
 				var answer = response.responseXML.documentElement.getAttribute("answer");
 				if(answer>=5 && g_form.getValue('assigned_to') != g_user.userID){
-					alert("Cannot claim this transaction. You already have "+answer+ " ongoing transactions.\nUser: " +g_form.getValue('assigned_to')+ "\nCurrent: " +g_user.userID);
 					block();
 				}
 			}
@@ -67,6 +58,8 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
 		for (var x = 0; x < fields.length; x++) {
 			g_form.setReadOnly(fields[x], true);
 		}
+		g_form.setMandatory('borrowed_book', false);
+		g_form.setVisible('borrowed_book', false);
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -75,7 +68,7 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>934b612a972211103e1f7cb0f053af99</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>onload options</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -83,7 +76,7 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_client_934b612a972211103e1f7cb0f053af99</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-03 07:22:01</sys_updated_on>
+        <sys_updated_on>2022-11-04 08:55:14</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
