@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.status!='deleted' &amp;&amp; (new GetBorrowedBooks().hasBorrow(current.title))==0</condition>
+        <condition>current.status!='deleted' &amp;&amp; (new GetBorrowedBooks().hasBorrow(current.getValue('sys_id')))==0</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -27,7 +27,7 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Delete book button</name>
+        <name>Delete Book</name>
         <onclick>deleter()</onclick>
         <order>100</order>
         <script><![CDATA[//Client-side 'onclick' function
@@ -58,15 +58,15 @@ function runBusRuleCode(){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>95457630977a91103e1f7cb0f053af29</sys_id>
-        <sys_mod_count>32</sys_mod_count>
-        <sys_name>Delete book button</sys_name>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>Delete Book</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_ui_action_95457630977a91103e1f7cb0f053af29</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-03 01:07:46</sys_updated_on>
+        <sys_updated_on>2022-11-08 08:36:24</sys_updated_on>
         <table>x_898711_library_m_books</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

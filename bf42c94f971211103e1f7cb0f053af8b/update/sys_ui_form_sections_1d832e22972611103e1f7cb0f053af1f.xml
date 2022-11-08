@@ -14,6 +14,20 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-10-18 04:50:26</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-07 04:34:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8aafd589970391103e1f7cb0f053af84</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_898711_library_m_book_transaction" name="x_898711_library_m_book_transaction" sys_domain="global" view="Default view">1d832e22972611103e1f7cb0f053af1f</sys_ui_form>
+            <sys_ui_section caption="Upon Approval" display_value="Upon Approval" name="x_898711_library_m_book_transaction" sys_domain="global" view="Default view">42afd589970391103e1f7cb0f053af82</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-07 04:34:26</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_898711_library_m_book_transaction</name>
             <roles/>

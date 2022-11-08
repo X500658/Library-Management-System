@@ -14,29 +14,27 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 		bookRecord.get(this.getParameter('sysparm_sys_id'));
 		return bookRecord.title + '';
 	},
-	hasBorrowClient: function(){
-		var borrow = new GlideRecord('x_898711_library_m_book_transaction');
-		borrow.addQuery('borrowed_book', 'CONTAINS', this.getParameter('sysparm_bookTitle'));
-		borrow.addEncodedQuery('state=-5^ORstate=2');
-		borrow.query();
-// 		gs.info("SIC Records: " +borrow.getRowCount()+ " for " +this.getParameter('sysparm_bookTitle'));
-		gs.info("SIC Records: " +borrow.getRowCount());
-		return borrow.getRowCount();
-	},
 	hasBorrow: function(bookTitle){
 		var borrow = new GlideRecord('x_898711_library_m_book_transaction');
 		borrow.addQuery('borrowed_book', 'CONTAINS', bookTitle);
 		borrow.addEncodedQuery('state=-5^ORstate=2');
-// 		borrowed_bookLIKEffd42550976211103e1f7cb0f053af48^state=-5^ORstate=2
-// 		borrowed_bookLIKEffd42550976211103e1f7cb0f053af48
-// 		ffd42550976211103e1f7cb0f053af48
 		borrow.query();
-// 		gs.info("SIserver Records: " +borrow.getRowCount()+ "\nnum: " +borrow.number);
-// 		while(borrow.hasNext()){
-// 			gs.info("SIserver Records: " +borrow.getRowCount()+ "\nnum: " +borrow.number);	
-// 		}
-// 		gs.info("SIserver Records: " +borrow.getRowCount()+ "\nTitle: " +bookTitle);
 		return borrow.getRowCount();
+	},
+	sort: function(){
+		var sorted = [];
+		var books = new GlideRecord('x_898711_library_m_book_transaction');
+		gs.info("List: "+this.getParameter('sysparm_booklist'));
+		books.addQuery('sys_id', 'IN', this.getParameter('sysparm_booklist'));
+		books.orderBy('title');
+		books.query();
+		gs.info("#Books: "+borrow.getRowCount());
+// 		while(books.next()){
+// 			gs.info("Book: " +books.title);
+// // 			sorted.push(books.sys_id);
+// 		}
+// 		gs.info("Sorted: " +sorted);
+// 		return sorted;
 	},
     type:'GetBorrowedBooks'
 });]]></script>
@@ -44,13 +42,13 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-10-17 05:47:26</sys_created_on>
         <sys_id>59a6e9de976611103e1f7cb0f053afee</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>GetBorrowedBooks</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_include_59a6e9de976611103e1f7cb0f053afee</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-04 11:04:14</sys_updated_on>
+        <sys_updated_on>2022-11-08 07:10:53</sys_updated_on>
     </sys_script_include>
 </record_update>

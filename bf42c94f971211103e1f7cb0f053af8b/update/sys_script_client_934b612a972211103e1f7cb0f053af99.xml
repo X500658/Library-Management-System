@@ -14,7 +14,10 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <order/>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
+	block();
 	if(g_form.isNewRecord()){
+		g_form.setSectionDisplay('upon_approval',false);
+		
 		var patron = new GlideAjax('Limits');
 		patron.addParam('sysparm_name','PatronTotal');
 		patron.getXML(populateListField2);
@@ -22,28 +25,42 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
 		function populateListField2(response){
 			var answer2 = response.responseXML.documentElement.getAttribute("answer");
 			if(answer2>=2){
-				block();
+				g_form.setMandatory('borrowed_book', false);
+				g_form.setVisible('borrowed_book', false);
 			}
 		}
 	}else{
-		if(g_user.hasRole('x_898711_library_m.librarian')){
-			//hide from librarians
-			g_form.removeOption('approval', 'approved');
-			g_form.removeOption('approval', 'rejected');
-
+		if(g_user.hasRole('x_898711_library_m.librarian')){			
+			g_form.setReadOnly('u_field_name_1', true);
+			
+			if(g_form.getValue('assigned_to')==''){
+				g_form.setReadOnly('assigned_to', false);
+				g_form.setReadOnly('approval', false);
+			}
+			if(!g_user.hasRole('x_898711_library_m.head_librarian') && (g_form.getValue('assigned_to')=='' || g_form.getValue('approval')=='rejected'))
+				g_form.setSectionDisplay('upon_approval',false);
+			
+			if(g_form.getValue('approval')=='requested' || g_form.getValue('approval')=='not requested'){
+				g_form.removeOption('approval', 'approved');
+				g_form.removeOption('approval', 'rejected');
+				
+				if(g_form.getValue('assigned_to')==g_user.userID){
+					g_form.setReadOnly('assigned_to', false);
+					g_form.setReadOnly('approval', false);
+				}
+			}
+			
 			var librarian = new GlideAjax('Limits');
 			librarian.addParam('sysparm_name','LibrarianLimit');
 			librarian.getXML(populateListField);
 
 			function populateListField(response){
 				var answer = response.responseXML.documentElement.getAttribute("answer");
-				if(answer>=5 && g_form.getValue('assigned_to') != g_user.userID){
-					block();
+				if(((answer>=5 && g_form.getValue('assigned_to')=='') || (g_form.getValue('assigned_to')!=g_user.userID &&  g_form.getValue('assigned_to')!='')) && g_form.getValue('u_field_name_1')!=g_user.userID){
+					g_form.setMandatory('borrowed_book', false);
+					g_form.setVisible('borrowed_book', false);
 				}
 			}
-		}else{
-			//hide from patrons		
-			g_form.removeOption('approval', 'requested');
 		}
 	}
 	// 	if(g_form.getValue('u_field_name_2')=='USD;0' || g_form.getValue('u_field_name_2')=='USD;0.00'){
@@ -58,8 +75,6 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
 		for (var x = 0; x < fields.length; x++) {
 			g_form.setReadOnly(fields[x], true);
 		}
-		g_form.setMandatory('borrowed_book', false);
-		g_form.setVisible('borrowed_book', false);
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -68,7 +83,7 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>934b612a972211103e1f7cb0f053af99</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>onload options</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -76,7 +91,7 @@ patrons cannot borrow when they exceed $2 overdue fee</description>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_client_934b612a972211103e1f7cb0f053af99</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-04 08:55:14</sys_updated_on>
+        <sys_updated_on>2022-11-08 07:43:53</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
