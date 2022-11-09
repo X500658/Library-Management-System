@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_drill">
-    <sys_report_drill action="INSERT_OR_UPDATE">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report">
+    <sys_report action="INSERT_OR_UPDATE">
         <additional_groupby/>
         <aggregate>COUNT</aggregate>
         <aggregation_source>no_override</aggregation_source>
@@ -32,10 +32,10 @@
         <column/>
         <compute_percent>aggregate</compute_percent>
         <content/>
-        <created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user>
+        <created_by_user display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</created_by_user>
         <custom_chart_size>false</custom_chart_size>
         <custom_chart_title_position>false</custom_chart_title_position>
-        <custom_config/>
+        <custom_config>{"transforms":[{"transform":{"transform":"Reference","name":"chart-subjects"}}]}</custom_config>
         <decimal_precision>2</decimal_precision>
         <description/>
         <direction>minimize</direction>
@@ -46,7 +46,7 @@
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
         <field>active</field>
-        <field_list>number,opened_at,short_description,caller_id,priority,state,category,assignment_group,assigned_to,sys_updated_on,sys_updated_by</field_list>
+        <field_list>number,u_field_name_1,borrowed_book,assigned_to,approval,state,work_start,due_date,u_field_name_2,short_description</field_list>
         <filter/>
         <formatting_configuration>{"table":"incident","stringFormattingProperties":{},"durationFormattingProperties":{},"dateFormattingProperties":{},"numberFormattingProperties":{}}</formatting_configuration>
         <from/>
@@ -54,7 +54,7 @@
         <gauge_autoscale>true</gauge_autoscale>
         <group/>
         <import_table/>
-        <interval>month</interval>
+        <interval>year</interval>
         <is_published>false</is_published>
         <is_real_time>false</is_real_time>
         <is_scheduled>false</is_scheduled>
@@ -72,7 +72,7 @@
         <map display_value="World">93b8a3a2d7101200bd4a4ebfae61033a</map>
         <map_source/>
         <orderby_list/>
-        <other_threshold>-2</other_threshold>
+        <other_threshold>-1</other_threshold>
         <others>true</others>
         <page_hdrftr/>
         <pivot_expanded>true</pivot_expanded>
@@ -102,29 +102,29 @@
         <start_time/>
         <style_config/>
         <sumfield/>
-        <sys_class_name>sys_report_drill</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-11-08 06:32:58</sys_created_on>
-        <sys_id>0064835d974711103e1f7cb0f053af98</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Monthly Book Transactions of a Book</sys_name>
+        <sys_class_name>sys_report</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-09 06:22:41</sys_created_on>
+        <sys_id>4b9bc0fd970711103e1f7cb0f053afa2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEST</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
-        <sys_update_name>sys_report_drill_0064835d974711103e1f7cb0f053af98</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-08 06:42:38</sys_updated_on>
+        <sys_update_name>sys_report_4b9bc0fd970711103e1f7cb0f053afa2</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:22:41</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
-        <title>Monthly Book Transactions of a Book</title>
+        <title>TEST</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
-        <trend_field>work_start</trend_field>
-        <type>line_bar</type>
+        <trend_field/>
+        <type>pie</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <use_null_in_trend>false</use_null_in_trend>
-        <user>6816f79cc0a8016401c5a33be04be441</user>
+        <user>2a8b2a0397d611103e1f7cb0f053af13</user>
         <x_axis_allow_decimals>true</x_axis_allow_decimals>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>
@@ -155,5 +155,5 @@
         <y_axis_title_color display_value="Black">65b30218a9fe3dba0120df8611520d97</y_axis_title_color>
         <y_axis_title_size>12</y_axis_title_size>
         <y_axis_to/>
-    </sys_report_drill>
+    </sys_report>
 </record_update>

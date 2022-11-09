@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="DELETE">
+        <access_type>restricted</access_type>
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category/>
+        <checked_out>false</checked_out>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <fulfillment_automation_level>manual</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>_Return Book/s</name>
+        <no_attachment_v2>true</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>true</no_cart_v2>
+        <no_delivery_time_v2>true</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>true</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>true</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
+        <picture>8324d04997a211103e1f7cb0f053af16</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=c29294c597a211103e1f7cb0f053af0d&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <request_method>submit</request_method>
+        <roles/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template display_value="AES Standard items in Service Catalog">03302dd377023010f082d599cf5a99ba</sc_template>
+        <short_description>Return your borrowed books</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state>published</state>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-13 02:26:21</sys_created_on>
+        <sys_id>c29294c597a211103e1f7cb0f053af0d</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>_Return Book/s</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sc_cat_item_c29294c597a211103e1f7cb0f053af0d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:25:57</sys_updated_on>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item>
+    <sys_translated_text action="DELETE" query="documentkey=c29294c597a211103e1f7cb0f053af0d"/>
+    <fx_price action="DELETE" query="id=c29294c597a211103e1f7cb0f053af0d"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>c29294c597a211103e1f7cb0f053af0d</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-13 02:26:21</sys_created_on>
+        <sys_id>0a9294c597a211103e1f7cb0f053af0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-13 02:26:21</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sc_cat_item_c29294c597a211103e1f7cb0f053af0d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item"><sc_cat_item action="INSERT_OR_UPDATE"><access_type>restricted</access_type><active>false</active><availability>on_desktop</availability><billable>false</billable><category/><checked_out>false</checked_out><cost>0</cost><custom_cart/><delivery_plan/><delivery_plan_script/><delivery_time>1970-01-03 00:00:00</delivery_time><description/><display_price_property>non_zero</display_price_property><entitlement_script/><flow_designer_flow/><fulfillment_automation_level>manual</fulfillment_automation_level><group/><hide_sp>false</hide_sp><icon/><ignore_price>true</ignore_price><image/><location/><mandatory_attachment>false</mandatory_attachment><meta/><mobile_hide_price>false</mobile_hide_price><mobile_picture/><mobile_picture_type>use_desktop_picture</mobile_picture_type><model/><name>_Return Book/s</name><no_attachment_v2>true</no_attachment_v2><no_cart>false</no_cart><no_cart_v2>true</no_cart_v2><no_delivery_time_v2>true</no_delivery_time_v2><no_order>false</no_order><no_order_now>false</no_order_now><no_proceed_checkout>false</no_proceed_checkout><no_quantity>false</no_quantity><no_quantity_v2>true</no_quantity_v2><no_search>false</no_search><no_wishlist_v2>true</no_wishlist_v2><omit_price>false</omit_price><order>0</order><ordered_item_link/><owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner><picture>8324d04997a211103e1f7cb0f053af16</picture><preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=c29294c597a211103e1f7cb0f053af0d&amp;sysparm_preview=true", "summary");</preview><price>0</price><published_ref/><recurring_frequency/><request_method>submit</request_method><roles/><sc_catalogs/><sc_ic_item_staging/><sc_ic_version/><sc_template display_value="AES Standard items in Service Catalog">03302dd377023010f082d599cf5a99ba</sc_template><short_description>Return your borrowed books</short_description><show_variable_help_on_load>false</show_variable_help_on_load><start_closed>false</start_closed><state>published</state><sys_class_name>sc_cat_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-13 02:26:21</sys_created_on><sys_id>c29294c597a211103e1f7cb0f053af0d</sys_id><sys_mod_count>22</sys_mod_count><sys_name>_Return Book/s</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sc_cat_item_c29294c597a211103e1f7cb0f053af0d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-11-09 06:25:57</sys_updated_on><taxonomy_topic/><template/><template_manager_roles/><type>item</type><use_sc_layout>true</use_sc_layout><vendor/><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><workflow/></sc_cat_item><sys_translated_text action="delete_multiple" query="documentkey=c29294c597a211103e1f7cb0f053af0d"/><fx_price action="delete_multiple" query="id=c29294c597a211103e1f7cb0f053af0d"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price</field><id>c29294c597a211103e1f7cb0f053af0d</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-13 02:26:21</sys_created_on><sys_id>0a9294c597a211103e1f7cb0f053af0e</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-13 02:26:21</sys_updated_on><table>sc_cat_item</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>-545185914</payload_hash>
+        <record_name>_Return Book/s</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 06:25:57</sys_created_on>
+        <sys_id>0f5c0471974711103e1f7cb0f053afa3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845b1116330000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:25:57</sys_updated_on>
+        <type>Catalog Item</type>
+        <update_guid>c35c0471754711102d7ac774b7b8eaa3</update_guid>
+        <update_guid_history>c35c0471754711102d7ac774b7b8eaa3:-545185914,a6b900bdb90711108071abe710f954b0:-408459025,4dbfde2748eed1108a855e5452e99cbd:338061144,5d8cf1e3e16ed110e52d3b142cfd13c2:-162581728,877cb1e39c6ed1103c6197f4e76e77a8:810239215,08def01f51aa911052cb3771143963b4:-1879142041,3b2454491ba211107d53fd9859c22816:-1965025670,bb245449f3a21110c289d7095862d702:612122119,2f2414498aa21110e4d03dfa2c9140e9:-1965025670,c32414496ca21110abe3e39198a330b5:557166503,4014904939a21110ad810945444637fe:-1970115435,f3049049ffa21110611154ad2879e1ea:1961580844,770490496fa21110fc7e9fba88c497b7:-1970115435,2643d009eba21110a3de8cead516e964:737032166,6243d009a5a21110b7c1d9fb7f281551:526984603,e243d00933a2111020a1c2b0a66c8639:737032166,7b3390099ea2111057fd1f137dc1f85c:-766009063,ff3390099ba211106e68ba89df58013c:-391084664,5f33500930a2111072266ea66346e9c0:-766009063,b5d298c53ea2111062e15fff35609eb5:1472371518,2dd298c577a2111018fb886db6906b95:-1957569565,29d298c519a21110a0c49344d268d770:1472371518,35c258c599a211107ec9aade0cb64150:-1701768210,429294c501a21110c0f94326b5afdc12:-1957569565</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="_Return Book/s">cb5c0471974711103e1f7cb0f053afc6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 06:25:57</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item">sc_cat_item</sys_db_object>
+        <sys_id>29d0ba4868ff46d088b7dc3a0f1ada79</sys_id>
+        <sys_metadata>c29294c597a211103e1f7cb0f053af0d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_Return Book/s</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sc_cat_item_c29294c597a211103e1f7cb0f053af0d</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_c29294c597a211103e1f7cb0f053af0d">0f5c0471974711103e1f7cb0f053afa3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:25:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

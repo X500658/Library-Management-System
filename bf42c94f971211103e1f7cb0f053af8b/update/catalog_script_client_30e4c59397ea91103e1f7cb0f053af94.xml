@@ -8,18 +8,34 @@
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Borrow Books">7b79aed0976611103e1f7cb0f053af1e</cat_item>
-        <cat_variable/>
+        <cat_variable>IO:08d92ad0976611103e1f7cb0f053afcf</cat_variable>
         <condition/>
         <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Check overdue (Catalog)</name>
+        <name>sort books</name>
         <order/>
-        <script><![CDATA[function onLoad() {
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
    //Type appropriate comment here, and begin script below
-   
+   var books = new GlideAjax('GetBorrowedBooks');
+	books.addParam('sysparm_name','sort');
+	books.addParam('sysparm_booklist',g_form.getValue('borrowed_book'));
+	books.getXML(populateListField);
+
+	function populateListField(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+// 		g_form.clearValue('borrowed_book');
+		var parsed= JSON.parse(answer);
+// 		alert(parsed.count+'');
+		if(g_form.getValue('borrowed_book')!=parsed.id)
+			g_form.setValue('borrowed_book',parsed.id+'',parsed.title+'');
+	}
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -27,17 +43,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>30e4c59397ea91103e1f7cb0f053af94</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Check overdue (Catalog)</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>sort books</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>catalog_script_client_30e4c59397ea91103e1f7cb0f053af94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-20 05:53:19</sys_updated_on>
+        <sys_updated_on>2022-11-09 05:59:49</sys_updated_on>
         <table/>
-        <type>onLoad</type>
+        <type>onChange</type>
         <ui_type>10</ui_type>
         <variable_set/>
         <view/>
