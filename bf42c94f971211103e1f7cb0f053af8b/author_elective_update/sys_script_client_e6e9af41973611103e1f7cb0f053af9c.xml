@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Patrons with more than $2 overdue fee are not allowed to borrow any books until all the borrowed books with overdue fees are returned and paid for. </description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>_onLoad_Overdue</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below\
+	
+// 	alert("test " +g_user.userID);
+	var patron = new GlideAjax('Limits');
+	patron.addParam('sysparm_name','PatronTotal');
+	patron.getXML(populateListField);
+	
+	function populateListField(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+// 		alert("Answer: " +answer);
+		if(answer>=2){
+			answer = g_form.getEditableFields();
+				for (var x = 0; x < answer.length; x++) {
+					g_form.setReadOnly(answer[x], true);
+} 
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 04:23:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e6e9af41973611103e1f7cb0f053af9c</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>_onLoad_Overdue</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_script_client_e6e9af41973611103e1f7cb0f053af9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 02:46:28</sys_updated_on>
+        <table>x_898711_library_m_book_transaction</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_script_client_e6e9af41973611103e1f7cb0f053af9c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Patrons with more than $2 overdue fee are not allowed to borrow any books until all the borrowed books with overdue fees are returned and paid for. &lt;/description&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;_onLoad_Overdue&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below\
+	
+// 	alert("test " +g_user.userID);
+	var patron = new GlideAjax('Limits');
+	patron.addParam('sysparm_name','PatronTotal');
+	patron.getXML(populateListField);
+	
+	function populateListField(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+// 		alert("Answer: " +answer);
+		if(answer&gt;=2){
+			answer = g_form.getEditableFields();
+				for (var x = 0; x &lt; answer.length; x++) {
+					g_form.setReadOnly(answer[x], true);
+} 
+		}
+	}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-26 04:23:15&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e6e9af41973611103e1f7cb0f053af9c&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_name&gt;_onLoad_Overdue&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_e6e9af41973611103e1f7cb0f053af9c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-03 02:46:28&lt;/sys_updated_on&gt;&lt;table&gt;x_898711_library_m_book_transaction&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>753525942</payload_hash>
+        <record_name>_onLoad_Overdue</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 02:46:28</sys_created_on>
+        <sys_id>1190a0fb97b211103e1f7cb0f053afb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843b61fc350000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 02:46:28</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>1990a0fb3fb211101bb900b3ec499bb4</update_guid>
+        <update_guid_history>1990a0fb3fb211101bb900b3ec499bb4:753525942,aba9583700b21110110e8eedd7ef1cbd:791672240,2b231c7fff7211104729e8e0e78ecd27:-846251235,ff6f447b4c721110fd815c1dc8c5eacc:-5169067,937174e347be11108280ec5df465aa7b:533450016,6b5c73131ffa111048aeb02db2d7f481:1289810728,7387ddb594721110713ecefa8e0a412a:1199652298,f0edf0a17b3a511097d24b863f75f0fc:996313074,10dd3c21863a5110b90a064a3cb0deff:1112410468,8b5cbcedc3f6511098db89d5342cb59b:1435101308,f5aed065b7b65110b5928b43af242521:-1683167456,978ed425b0b6511042ec3f04ceed31ba:53906402,fa5b4c6172765110f1c323925ce194f8:369924098,8d0acc61f17651102a09d01aa275a097:-1485830600,e8a98c21497651106b5f0a66eb2937f9:1217136280,32414425d1365110f0cd2db4d69154a2:-1828434336,755aec11c43a1110b5496e851834c18d:-489333834,d71a6c51d63a1110c8e89fc19427131b:738663737,97fc27c992361110960c2766724b2036:532375919,6e6be3493b36111040ceef1b6337cd0d:1105684721,a9ca634945361110f55de2ec84b6edb6:-604517563,cd0aafc51f36111029d26ec327aa61a2:-102554528</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-10 00:23:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0734de8a056a40788389e16c429cc644</sys_id>
+        <sys_metadata>e6e9af41973611103e1f7cb0f053af9c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_onLoad_Overdue</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent display_value="Book Transaction">5d311d80976611103e1f7cb0f053afe6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_script_client_e6e9af41973611103e1f7cb0f053af9c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_e6e9af41973611103e1f7cb0f053af9c">1190a0fb97b211103e1f7cb0f053afb5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-10 00:23:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

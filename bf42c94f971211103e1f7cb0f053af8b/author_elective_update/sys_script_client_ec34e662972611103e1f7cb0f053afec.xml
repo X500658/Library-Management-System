@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Automatically change `state` to 'Borrowing' when `approval` changes to 'Approved' by a Head Librarian</description>
+        <field>approval</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>_onChange Approve</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+   //Type appropriate comment here, and begin script below
+   function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+   if(g_form.getValue('approval')==='approved' && g_user.hasRole('x_898711_library_m.head_librarian')){
+		g_form.setValue('state', 2, 'Borrowing');
+
+		var BookDates = new GlideAjax('BookDates');
+		BookDates.addParam('sysparm_name','getStartDate');
+		BookDates.getXML(populateListField);
+
+		var BookDates2 = new GlideAjax('BookDates');
+		BookDates2.addParam('sysparm_name','getDueDate');
+		BookDates2.getXML(populateListField2);
+
+		function populateListField(response){
+			var date = response.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue('work_start', date, date);
+		}
+
+		function populateListField2(response){
+			var date = response.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue('due_date', date, date);
+		}
+	}
+}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-18 05:37:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ec34e662972611103e1f7cb0f053afec</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>_onChange Approve</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_script_client_ec34e662972611103e1f7cb0f053afec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 02:46:38</sys_updated_on>
+        <table>x_898711_library_m_book_transaction</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_script_client_ec34e662972611103e1f7cb0f053afec</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Automatically change `state` to 'Borrowing' when `approval` changes to 'Approved' by a Head Librarian&lt;/description&gt;&lt;field&gt;approval&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;_onChange Approve&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+   //Type appropriate comment here, and begin script below
+   function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+   if(g_form.getValue('approval')==='approved' &amp;&amp; g_user.hasRole('x_898711_library_m.head_librarian')){
+		g_form.setValue('state', 2, 'Borrowing');
+
+		var BookDates = new GlideAjax('BookDates');
+		BookDates.addParam('sysparm_name','getStartDate');
+		BookDates.getXML(populateListField);
+
+		var BookDates2 = new GlideAjax('BookDates');
+		BookDates2.addParam('sysparm_name','getDueDate');
+		BookDates2.getXML(populateListField2);
+
+		function populateListField(response){
+			var date = response.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue('work_start', date, date);
+		}
+
+		function populateListField2(response){
+			var date = response.responseXML.documentElement.getAttribute("answer");
+			g_form.setValue('due_date', date, date);
+		}
+	}
+}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-18 05:37:47&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ec34e662972611103e1f7cb0f053afec&lt;/sys_id&gt;&lt;sys_mod_count&gt;45&lt;/sys_mod_count&gt;&lt;sys_name&gt;_onChange Approve&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_ec34e662972611103e1f7cb0f053afec&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-03 02:46:38&lt;/sys_updated_on&gt;&lt;table&gt;x_898711_library_m_book_transaction&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-68668392</payload_hash>
+        <record_name>_onChange Approve</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 02:46:38</sys_created_on>
+        <sys_id>779068fb97b211103e1f7cb0f053af64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843b6223640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 02:46:38</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>bf9068fbf5b21110d11e4697eb5f6a63</update_guid>
+        <update_guid_history>bf9068fbf5b21110d11e4697eb5f6a63:-68668392,0cf496717176111053cc3ceda1d1d489:-1776340460,0e6ae5392ab21110cdfc90f0579e4232:1605969665,d5ba59b56672111042d330c8c7865da3:371630409,bc455d35b772111049e3cb9fe02b621a:1186908029,016dfeb47c7a9110e37d40792b22c0c3:-1498599759,dd0db772892a5110faa89bacb712ecde:238337681,407c5f2aece61110fcfef9b1bb415084:-1831733153,cd2c97e6c3e61110518d923f8880a674:157361030,2c9b97e6b8e61110b23ed5eb6c70d66f:1727897385,3d0b97e645e6111051dc832ccc94ab40:-1426557129,3ada17e634e611103d198612b8eee557:638147513,979113ea41a61110072ac78834f7696f:-993247701,98dc876a13a6111018d97e815d213635:1624646610,055ccb2a40a61110adf2bcdf6d6e5c08:-1901207636,4bdb0fe617a611109e758316dda531df:-1188686239,8d8b03e67da611102bc3faef01c8db58:-1104979588,9d6b87e60da61110d7c6eb4f045cee2a:1162997860,c31a036638a61110632e8984acc5dfba:-1640836109,c50903664ba61110f1a0b846640388d2:-1922140081,5488c726afa61110a63be3bf94f94ec6:833295271,12c5c3a20ca61110dc8cafe00ac1a039:1727253720,6094c7ae21661110a7babe9584c5df23:-1345321648,6c4ebeaa256611100470e96d5e085346:-1644220792,4c0e7aaa35661110fae8e46cf169ebf0:152296880,565d76a6576611105974a8810e8cc930:-1881688342,3edbf22a5e661110730053eaa0741e54:388687146,60bb362a24661110f921d68263ee0dae:1915082937,015932a6be661110a200ea2379303b8c:1650994821,2249f266d9661110e75773cf8425571d:-550324829,5ea83666016611107bedc0fd681b7bbf:-791601787,6d78726641661110114527fbe56c5e95:-543551659,e6583266c6661110d5d2da5547409cd7:-2042763005,d218f626846611102152162e2b46dec5:-45023721,e7c7b626c96611102e5066b4c3dfe35e:1805166248,5a07fae2df661110aa983097e4815408:1771831022,6646bea21b66111096aaa8b13be5b44f:1822803557,e275beeebe2611106c7be4ea1b8af6ce:192848140,36337eeed9261110c88175446ae015d3:25487023,299172ae352611102951d45df83ebc52:-512810599,5241f26e87261110de4dc9283d3d54ce:-487324011,0d31ba6e242611106b2c7180027f7a8c:-1826310220,bdc07e2e65261110249762d4732da3cc:-196472492,4750fa2e3c2611108cc53a3592bde99a:212595653,88dfeeeaab26111075b51846ca0c71d4:539691594,cf5e2e6a0c261110a40826764d42feec:-583052744</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-10 00:23:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>29a16e04474d4e699320022d3e21c6d1</sys_id>
+        <sys_metadata>ec34e662972611103e1f7cb0f053afec</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_onChange Approve</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent display_value="Book Transaction">5d311d80976611103e1f7cb0f053afe6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_script_client_ec34e662972611103e1f7cb0f053afec</sys_update_name>
+        <sys_update_version display_value="sys_script_client_ec34e662972611103e1f7cb0f053afec">779068fb97b211103e1f7cb0f053af64</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-10 00:23:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>_Cannot Delete Message</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	var limit = new GlideAjax('Limits');
+	limit.addParam('sysparm_name','hasBorrowClient');
+	var title  =g_form.getValue('title');
+	limit.addParam('sysparm_bookTitle', g_form.getUniqueValue());
+	limit.getXML(populateListField);
+
+	function populateListField(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		alert("status: " +g_form.getValue('status')+ "\nams: " +answer);
+		if(g_form.getValue('status')!='deleted' && answer>0){
+			g_form.addErrorMessage("Book cannot be deleted, there are ongoing transactions");
+			alert("Book cannot be deleted, there are ongoing transactions");
+		}else{
+			alert("elseblock");
+		}
+		g_form.setValue('publisher',ans);
+	}	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 02:55:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd91e83f97b211103e1f7cb0f053af19</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>_Cannot Delete Message</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_script_client_dd91e83f97b211103e1f7cb0f053af19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-04 10:58:07</sys_updated_on>
+        <table>x_898711_library_m_books</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_script_client_dd91e83f97b211103e1f7cb0f053af19</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;_Cannot Delete Message&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	var limit = new GlideAjax('Limits');
+	limit.addParam('sysparm_name','hasBorrowClient');
+	var title  =g_form.getValue('title');
+	limit.addParam('sysparm_bookTitle', g_form.getUniqueValue());
+	limit.getXML(populateListField);
+
+	function populateListField(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		alert("status: " +g_form.getValue('status')+ "\nams: " +answer);
+		if(g_form.getValue('status')!='deleted' &amp;&amp; answer&gt;0){
+			g_form.addErrorMessage("Book cannot be deleted, there are ongoing transactions");
+			alert("Book cannot be deleted, there are ongoing transactions");
+		}else{
+			alert("elseblock");
+		}
+		g_form.setValue('publisher',ans);
+	}	
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-03 02:55:22&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;dd91e83f97b211103e1f7cb0f053af19&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;_Cannot Delete Message&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Library Management System" source="x_898711_library_m"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Library Management System"&gt;bf42c94f971211103e1f7cb0f053af8b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_dd91e83f97b211103e1f7cb0f053af19&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-04 10:58:07&lt;/sys_updated_on&gt;&lt;table&gt;x_898711_library_m_books&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>136506255</payload_hash>
+        <record_name>_Cannot Delete Message</record_name>
+        <reverted_from/>
+        <source>4e354503975211103e1f7cb0f053af1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-04 10:58:07</sys_created_on>
+        <sys_id>01bad744970f51103e1f7cb0f053afe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184424a78750000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-04 10:58:07</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>09bad744ff0f5110d5c6eae0eb6455e7</update_guid>
+        <update_guid_history>09bad744ff0f5110d5c6eae0eb6455e7:136506255,f5aa5b44bc0f511056a3a9cfce3334f5:1373853890,e8aa9b44050f51109d97bc4b1e80d4d9:136506255,e1c7d780390f511008070a3650281616:-1280399766,45cb7cf3e736111029ca436806c5a1a3:1284458381,96f970f39e361110f2c9594db56129c4:-606078426,331938735c361110490e9e4d9edd5e38:-1977107426,00c7fc33f336111005ca8e548a20b8d9:-1780224375,11977c3fc1f2111075187db096139723:-202050638,e603383f86f211108cf5d7872c045fc1:-161187549,8d9368bf12b2111079877ef8cbd4de24:-1420869293,a9f2243f13b21110310b58062370c70d:-44264983,3392e83f31b2111083443aab0fff4d22:-1899962745</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-10 00:23:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0cab7ddb86d946e9839284bc595e4941</sys_id>
+        <sys_metadata>dd91e83f97b211103e1f7cb0f053af19</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_Cannot Delete Message</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent display_value="Books">73b40503975211103e1f7cb0f053af9b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_script_client_dd91e83f97b211103e1f7cb0f053af19</sys_update_name>
+        <sys_update_version display_value="sys_script_client_dd91e83f97b211103e1f7cb0f053af19">01bad744970f51103e1f7cb0f053afe8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-10 00:23:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
