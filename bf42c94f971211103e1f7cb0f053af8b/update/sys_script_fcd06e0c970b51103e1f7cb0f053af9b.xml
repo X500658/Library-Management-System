@@ -30,10 +30,8 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Add your code here
-// 	&& current.assigned_to!= gs.getUserID() && new Limits().LibrarianLimit()>=5
-	if(current.assigned_to!= gs.getUserID() && current.assigned_to!='' && !gs.hasRole('x_898711_library_m.head_librarian'))
+	if(current.assigned_to!= gs.getUserID() && current.assigned_to!='')
 		gs.addErrorMessage("Cannot edit this record. You are not the assigned librarian.");
-	
 	if(current.assigned_to!= gs.getUserID() && new Limits().LibrarianLimit()>=5){
 		gs.addErrorMessage("This transaction cannot be assigned to you. You already have "+new Limits().LibrarianLimit()+ " ongoing transactions. Please wait until a transaction has been closed to proceed.");
 	}
@@ -44,7 +42,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fcd06e0c970b51103e1f7cb0f053af9b</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Prevent update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -52,7 +50,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_fcd06e0c970b51103e1f7cb0f053af9b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-07 05:08:44</sys_updated_on>
+        <sys_updated_on>2022-11-14 04:50:01</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>

@@ -76,7 +76,7 @@
 	
 		present2.update();
 		
-		gs.info("Approved: Transaction " +present2.number);
+		var message ="Approved: Transaction " +present2.number;
 		
 		for(i=0; i<array.length;i++){
 			books = new GlideRecord('x_898711_library_m_books');
@@ -85,9 +85,10 @@
 			while(books.next()){
 				books.setValue('available_copies',(books.available_copies-1));
 				books.update();
-				gs.info("Borrowed book: " +books.title+ ", updated to " +books.available_copies +" copies left");
+				message+="\nBorrowed book: " +books.title+ ", updated to " +books.available_copies +" copies left";
 			}
 		}
+		gs.info(message);
 	}
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -96,7 +97,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ee6dae7697e251103e1f7cb0f053af61</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>91</sys_mod_count>
         <sys_name>Subtract availability on borrow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -104,7 +105,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_ee6dae7697e251103e1f7cb0f053af61</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-09 08:59:28</sys_updated_on>
+        <sys_updated_on>2022-11-11 06:26:05</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

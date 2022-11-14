@@ -32,19 +32,20 @@
 	// Add your code here
 	var array = current.borrowed_book.split(",");
 	
+	var message ="Closing: Transaction " +current.number;
 	for(var i=0; i<array.length;i++){
 // 		gs.info("Attempting to find book " +(i+1)+ ": "+array[i]);
 		
 		var books = new GlideRecord('x_898711_library_m_books');
 		books.addQuery('sys_id', array[i]);
 		books.query();
-		
 		while(books.next()){
 			books.setValue('available_copies',(books.available_copies+1));
 			books.update();
-			gs.info(books.number+ "\nReturned book: " +books.title+ ", updated to " +books.available_copies +" available copies");
+			message+="\nReturning books: " +books.title+ ", updated to " +books.available_copies +" available copies";
 		}
 	}
+	gs.info(message);
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -52,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>98deb7f2972a51103e1f7cb0f053afb1</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Add availability on return</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -60,7 +61,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_98deb7f2972a51103e1f7cb0f053afb1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-10 08:52:55</sys_updated_on>
+        <sys_updated_on>2022-11-11 07:25:24</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

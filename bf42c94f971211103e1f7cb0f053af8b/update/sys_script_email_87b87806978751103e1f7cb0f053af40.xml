@@ -7,28 +7,37 @@
           /* Optional GlideRecord */ event) {
 
           // Add your code here
+		var total = new Limits().PatronTotalforEmail(current.u_field_name_1);
 		var overdues = new GlideRecord('x_898711_library_m_book_transaction');
 		overdues.addQuery('due_date', '<=', new GlideDateTime());
-		overdues.addQuery('u_field_name_1', gs.getUserID());
+		overdues.addQuery('u_field_name_1', current.u_field_name_1);
 		overdues.addEncodedQuery('state=2');
 		overdues.addNotNullQuery('due_date');
 		overdues.query();
-		template.print("<p style=\"font:18px Verdana, sans-serif\">Your current overdue fee is $"+new Limits().PatronTotal()+" USD.");
+		
+		template.print("<p style=\"font:18px Verdana, sans-serif\">Your current overdue fee is $"+total+" USD.");
 		if(overdues.getRowCount()>1)
-			template.print("<br>You also have " +(overdues.getRowCount()-1)+" other overdue transactions");
+			template.print("<br>You also have " +(overdues.getRowCount()-1)+" other overdue transactions.<br>");
+		if(total>2)
+			template.print("<br>While your overdue fee is greater than $2.00 USD, you will not be able to borrow books.");
+		else
+			template.print("<br>");
+		template.print("<br>Please return the books as soon as possible to close this transaction.");
+		if(total<2)
+			template.print("<br>Otherwise, when your overdue fees total to $2.00 USD or greater, you will no longer be able to borrow books.");
 		template.print("</p>");
 })(current, template, email, email_action, event);]]></script>
         <sys_class_name>sys_script_email</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-10 05:13:49</sys_created_on>
         <sys_id>87b87806978751103e1f7cb0f053af40</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>GetPatronTotal</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_email_87b87806978751103e1f7cb0f053af40</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-10 07:16:08</sys_updated_on>
+        <sys_updated_on>2022-11-14 03:10:01</sys_updated_on>
     </sys_script_email>
 </record_update>

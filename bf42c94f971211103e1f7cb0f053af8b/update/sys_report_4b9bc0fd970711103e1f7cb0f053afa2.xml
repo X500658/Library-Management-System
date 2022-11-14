@@ -57,7 +57,7 @@
         <group/>
         <import_table/>
         <interval>month</interval>
-        <is_published>false</is_published>
+        <is_published>true</is_published>
         <is_real_time>false</is_real_time>
         <is_scheduled>false</is_scheduled>
         <legend_align_columns>true</legend_align_columns>
@@ -80,7 +80,7 @@
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
         <report_source/>
-        <roles/>
+        <roles>x_898711_library_m.head_librarian,public</roles>
         <row/>
         <sc_groupby_item_id/>
         <sc_groupby_variable_id/>
@@ -108,14 +108,14 @@
         <sys_created_by>harold.yamo</sys_created_by>
         <sys_created_on>2022-11-09 06:22:41</sys_created_on>
         <sys_id>4b9bc0fd970711103e1f7cb0f053afa2</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>TEST</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_report_4b9bc0fd970711103e1f7cb0f053afa2</sys_update_name>
         <sys_updated_by>harold.yamo</sys_updated_by>
-        <sys_updated_on>2022-11-10 06:18:51</sys_updated_on>
+        <sys_updated_on>2022-11-14 01:47:01</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <title>TEST</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
@@ -126,7 +126,7 @@
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <use_null_in_trend>false</use_null_in_trend>
-        <user>2a8b2a0397d611103e1f7cb0f053af13</user>
+        <user>GLOBAL</user>
         <x_axis_allow_decimals>true</x_axis_allow_decimals>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>

@@ -29,14 +29,14 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 		books.addQuery('sys_id', 'IN', this.getParameter('sysparm_booklist'));
 		books.orderBy('title');
 		books.query();
-		gs.info("#Books: "+books.getRowCount());
+// 		gs.info("#Books: "+books.getRowCount());
 		while(books.next()){
-			gs.info("    Book: " +books.title);
+// 			gs.info("    Book: " +books.title);
 			sorted.id.push(books.sys_id+"");
 			sorted.title.push(books.title+"");
 		}
 		sorted.count=books.getRowCount();
-		gs.info("Sorted: " +sorted.title);
+// 		gs.info("Sorted: " +sorted.title);
 		return JSON.stringify(sorted);
 	},
     type:'GetBorrowedBooks'
@@ -45,13 +45,13 @@ GetBorrowedBooks.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-10-17 05:47:26</sys_created_on>
         <sys_id>59a6e9de976611103e1f7cb0f053afee</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>GetBorrowedBooks</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_script_include_59a6e9de976611103e1f7cb0f053afee</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-09 02:36:49</sys_updated_on>
+        <sys_updated_on>2022-11-11 07:55:23</sys_updated_on>
     </sys_script_include>
 </record_update>
