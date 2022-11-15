@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.isValidRecord() &amp;&amp; current.canWrite() &amp;&amp; gs.getProperty('glide.ui.update_is_submit') != 'true' &amp;&amp; (current.assigned_to=='' || current.assigned_to==gs.getUserByID());</condition>
+        <condition>current.isValidRecord() &amp;&amp; current.canWrite() &amp;&amp; gs.getProperty('glide.ui.update_is_submit') != 'true' &amp;&amp; (current.assigned_to=='' || current.assigned_to==gs.getUserID());</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -41,7 +41,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5f20e24c970b51103e1f7cb0f053af91</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
@@ -49,7 +49,7 @@
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_update_name>sys_ui_action_5f20e24c970b51103e1f7cb0f053af91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-14 04:49:56</sys_updated_on>
+        <sys_updated_on>2022-11-15 00:12:23</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

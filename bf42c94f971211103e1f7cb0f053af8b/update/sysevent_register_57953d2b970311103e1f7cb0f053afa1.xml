@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description>sends notification to a user when their transaction becomes overdue</description>
+        <event_name>x_898711_library_m.overdue_transaction</event_name>
+        <fired_by>Scheduled Script Execution - Find Overdue Books</fired_by>
+        <queue/>
+        <suffix>overdue_transaction</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-15 00:36:31</sys_created_on>
+        <sys_id>57953d2b970311103e1f7cb0f053afa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_898711_library_m.overdue_transaction</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sysevent_register_57953d2b970311103e1f7cb0f053afa1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-15 00:36:31</sys_updated_on>
+        <table>x_898711_library_m_book_transaction</table>
+    </sysevent_register>
+</record_update>
