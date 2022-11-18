@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report">
     <sys_report action="INSERT_OR_UPDATE">
-        <additional_groupby>borrowed_book</additional_groupby>
-        <aggregate>COUNT</aggregate>
+        <additional_groupby/>
+        <aggregate>SUM</aggregate>
         <aggregation_source>no_override</aggregation_source>
         <allow_data_label_overlap>false</allow_data_label_overlap>
         <apply_alias>false</apply_alias>
@@ -30,7 +30,7 @@
         <color_palette display_value="Default UI14">aa558ab3d7732100fa6c0c12ce610377</color_palette>
         <colors/>
         <column/>
-        <compute_percent>count</compute_percent>
+        <compute_percent>aggregate</compute_percent>
         <content/>
         <created_by_user display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</created_by_user>
         <custom_chart_size>false</custom_chart_size>
@@ -45,10 +45,9 @@
         <donut_width_percent>30</donut_width_percent>
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
-        <field/>
+        <field>u_field_name_1</field>
         <field_list>number,u_field_name_1,borrowed_book,assigned_to,approval,state,work_start,due_date,u_field_name_2,short_description</field_list>
-        <filter table="x_898711_library_m_book_transaction">work_startISNOTEMPTY^approval=approved<item endquery="false" field="work_start" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
-            <item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <filter table="x_898711_library_m_book_transaction">u_field_name_2&gt;javascript:global.getCurrencyFilter('x_898711_library_m_book_transaction','u_field_name_2','USD;0')<item endquery="false" field="u_field_name_2" goto="false" newquery="false" operator="&gt;" or="false" value="javascript:global.getCurrencyFilter('x_898711_library_m_book_transaction','u_field_name_2','USD;0')"/>
         </filter>
         <formatting_configuration>{"table":"incident","stringFormattingProperties":{},"durationFormattingProperties":{},"dateFormattingProperties":{},"numberFormattingProperties":{}}</formatting_configuration>
         <from/>
@@ -74,8 +73,8 @@
         <map display_value="World">93b8a3a2d7101200bd4a4ebfae61033a</map>
         <map_source/>
         <orderby_list/>
-        <other_threshold>-1</other_threshold>
-        <others>false</others>
+        <other_threshold>-2</other_threshold>
+        <others>true</others>
         <page_hdrftr/>
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
@@ -88,7 +87,7 @@
         <sc_stackby_variable_id/>
         <score_color display_value="Black">65b30218a9fe3dba0120df8611520d97</score_color>
         <series_name_text/>
-        <set_color>one_color</set_color>
+        <set_color>color_palette</set_color>
         <show_chart_border>false</show_chart_border>
         <show_chart_data_label>true</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
@@ -103,26 +102,26 @@
         <source_type>table</source_type>
         <start_time/>
         <style_config/>
-        <sumfield/>
+        <sumfield>u_field_name_2</sumfield>
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>harold.yamo</sys_created_by>
-        <sys_created_on>2022-11-07 06:08:27</sys_created_on>
-        <sys_id>8b253d0d974391103e1f7cb0f053afd2</sys_id>
-        <sys_mod_count>34</sys_mod_count>
-        <sys_name>Popularity Of Books per Month</sys_name>
+        <sys_created_on>2022-11-16 05:20:05</sys_created_on>
+        <sys_id>ae60c088971711103e1f7cb0f053af7c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Total Overdue of Users per Month</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
-        <sys_update_name>sys_report_8b253d0d974391103e1f7cb0f053afd2</sys_update_name>
+        <sys_update_name>sys_report_ae60c088971711103e1f7cb0f053af7c</sys_update_name>
         <sys_updated_by>harold.yamo</sys_updated_by>
-        <sys_updated_on>2022-11-16 06:01:05</sys_updated_on>
+        <sys_updated_on>2022-11-16 06:03:24</sys_updated_on>
         <table>x_898711_library_m_book_transaction</table>
-        <title>Popularity Of Books per Month</title>
+        <title>Total Overdue of Users per Month</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
         <trend_field>work_start</trend_field>
-        <type>trend</type>
+        <type>line_bar</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <use_null_in_trend>false</use_null_in_trend>
