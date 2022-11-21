@@ -14,7 +14,7 @@
         <label>Books</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_898711_library_m_books</name>
-        <number_ref display_value="BOO">f7b40503975211103e1f7cb0f053afb4</number_ref>
+        <number_ref display_value="BK">f7b40503975211103e1f7cb0f053afb4</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

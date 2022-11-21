@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="DELETE">
+        <group_id/>
+        <report_id display_value="">4b9bc0fd970711103e1f7cb0f053afa2</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-09 06:22:41</sys_created_on>
+        <sys_id>cf9bc0fd970711103e1f7cb0f053afa2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4b9bc0fd970711103e1f7cb0f053afa2</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_report_users_groups_cf9bc0fd970711103e1f7cb0f053afa2</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:22:41</sys_updated_on>
+        <user_id display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</user_id>
+    </sys_report_users_groups>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_report_users_groups_cf9bc0fd970711103e1f7cb0f053afa2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups"><sys_report_users_groups action="INSERT_OR_UPDATE"><group_id/><report_id display_value="">4b9bc0fd970711103e1f7cb0f053afa2</report_id><sys_class_name>sys_report_users_groups</sys_class_name><sys_created_by>harold.yamo</sys_created_by><sys_created_on>2022-11-09 06:22:41</sys_created_on><sys_id>cf9bc0fd970711103e1f7cb0f053afa2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4b9bc0fd970711103e1f7cb0f053afa2</sys_name><sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package><sys_policy/><sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope><sys_update_name>sys_report_users_groups_cf9bc0fd970711103e1f7cb0f053afa2</sys_update_name><sys_updated_by>harold.yamo</sys_updated_by><sys_updated_on>2022-11-09 06:22:41</sys_updated_on><user_id display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</user_id></sys_report_users_groups></record_update>]]></payload>
+        <payload_hash>1840619624</payload_hash>
+        <record_name>4b9bc0fd970711103e1f7cb0f053afa2</record_name>
+        <reverted_from/>
+        <source>39fbfb21970711103e1f7cb0f053af31</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-11-09 06:22:41</sys_created_on>
+        <sys_id>c39bc0fd970711103e1f7cb0f053afa5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845b0e191f0000001</sys_recorded_at>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:22:41</sys_updated_on>
+        <type>Report Users and Groups</type>
+        <update_guid>0f9bc0fdb30711103e4f841ccfca44a4</update_guid>
+        <update_guid_history>0f9bc0fdb30711103e4f841ccfca44a4:1840619624</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-21 01:46:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_report_users_groups">sys_report_users_groups</sys_db_object>
+        <sys_id>23acc8232653400c931cc9fbb2890aa1</sys_id>
+        <sys_metadata>cf9bc0fd970711103e1f7cb0f053afa2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4b9bc0fd970711103e1f7cb0f053afa2</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_report_users_groups_cf9bc0fd970711103e1f7cb0f053afa2</sys_update_name>
+        <sys_update_version display_value="sys_report_users_groups_cf9bc0fd970711103e1f7cb0f053afa2">c39bc0fd970711103e1f7cb0f053afa5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-21 01:46:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

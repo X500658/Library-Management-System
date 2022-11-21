@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2022-10-25 05:50:26</change_date>
+        <changed_by display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</changed_by>
+        <content display_value="Create development environment records">4843acd7c7c90110408bc8d6f2c26089</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-25 05:50:26</sys_created_on>
+        <sys_id>6464f6fc973a91103e1f7cb0f053af9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2022-10-25 05:50:26</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>gsw_change_log_6464f6fc973a91103e1f7cb0f053af9a</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-10-25 05:50:26</sys_updated_on>
+        <type>4</type>
+    </gsw_change_log>
+</record_update>

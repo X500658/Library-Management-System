@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="DELETE">
+        <active>true</active>
+        <hint/>
+        <name>Book Transaction</name>
+        <order/>
+        <roles>x_898711_library_m.patron</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-10 04:37:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1cd3d144976611103e1f7cb0f053af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Transaction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_ui_application_1cd3d144976611103e1f7cb0f053af44</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-10-10 04:37:23</sys_updated_on>
+    </sys_ui_application>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</application>
+        <file_path/>
+        <instance_id>3211ff49db1115d452dd2f17d4961964</instance_id>
+        <instance_name>dev131732</instance_name>
+        <name>sys_ui_application_1cd3d144976611103e1f7cb0f053af44</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Book Transaction</name>
+        <order/>
+        <roles>x_898711_library_m.patron</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-10 04:37:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1cd3d144976611103e1f7cb0f053af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Transaction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sys_ui_application_1cd3d144976611103e1f7cb0f053af44</sys_update_name>
+        <sys_updated_by>harold.yamo</sys_updated_by>
+        <sys_updated_on>2022-10-10 04:37:23</sys_updated_on>
+    </sys_ui_application>
+</record_update>]]></payload>
+        <payload_hash>19548199</payload_hash>
+        <record_name>Book Transaction</record_name>
+        <reverted_from/>
+        <source>479282dc97a211103e1f7cb0f053afcb</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-11 02:41:01</sys_created_on>
+        <sys_id>51c2021097e211103e1f7cb0f053af4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183c4eabc0c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-11 02:41:01</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>9dc202105ee2111053d391651e247049</update_guid>
+        <update_guid_history>9dc202105ee2111053d391651e247049:0,d5496154716211107a99c3c6312069ff:1571698318,dcd3d144a966111095ecf71957afb246:-625677127</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-21 01:39:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_application">sys_ui_application</sys_db_object>
+        <sys_id>9daa1616b26e4492882a360db1950369</sys_id>
+        <sys_metadata>1cd3d144976611103e1f7cb0f053af44</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Transaction</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>
+        <sys_update_name>sys_ui_application_1cd3d144976611103e1f7cb0f053af44</sys_update_name>
+        <sys_update_version display_value="sys_ui_application_1cd3d144976611103e1f7cb0f053af44">51c2021097e211103e1f7cb0f053af4a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-21 01:39:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

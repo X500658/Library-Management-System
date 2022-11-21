@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Find Overdue Books</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Harold  Yamo">2a8b2a0397d611103e1f7cb0f053af13</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2022-10-18 07:36:17</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var rightNow = new GlideDateTime();
+var overdueToday = new GlideRecord('x_898711_library_m_book_transaction');
+	
+overdueToday.addQuery('due_date', '<=', rightNow);
+overdueToday.addQuery('state', '=', 2);
+overdueToday.addNotNullQuery('due_date');
+overdueToday.query();
+while(overdueToday.next()){
+//     gs.info("Overdue " + overdueToday.number);
+// 	gs.info("Borrowed type: "+overdueToday.borrowed_book.toString());
+	
+	var number_of_books = overdueToday.borrowed_book.split(',');
+	var new_fee = +(parseFloat(overdueToday.u_field_name_2.getCurrencyValue())+(0.20*number_of_books.length)).toFixed(2);
+	
+	//self healing/correction of fee
+	var gdDue = new GlideDateTime(overdueToday.due_date); 
+	var duration = GlideDateTime.subtract(gdDue, rightNow); 
+	
+	overdueToday.short_description="This transaction is overdue. Please finish this tranasaction to not incur additional fees.";
+	
+	var true_fee = +(duration.getDayPart()*(0.20*number_of_books.length)).toFixed(2);
+	if(new_fee!=true_fee){
+		gs.info("Overdue: " +overdueToday.number+ " - " +number_of_books.length+ " book/s\nOverdue fee has been corrected from " +new_fee.toFixed(2)+ "USD  to " +true_fee.toFixed(2)+ "USD");
+		new_fee=true_fee;
+	}
+	if(parseFloat(overdueToday.u_field_name_2.getCurrencyValue())==0 && new_fee>0){
+		gs.info("Trigger event");
+		gs.eventQueue("x_898711_library_m.overdue_transaction", overdueToday, overdueToday.number, overdueToday.u_field_name_1);
+
+	}
+// 	if(new_fee<0){
+// 		gs.info("Overdue: " +overdueToday.number+ "\nOverdue fee has been zeroed from " +new_fee.toFixed(2)+ "USD");
+// 		new_fee=0;
+// 	}
+	
+// 	gs.info("Overdue " + overdueToday.number + "\n" + overdueToday.borrowed_book + "\t(#: " + number_of_books.length + ")\nCuurency: " +overdueToday.u_field_name_2.getCurrencyValue() + "\nNewCuurency: " +(parseFloat(overdueToday.u_field_name_2.getCurrencyValue()).toFixed(2)+(10*number_of_books.length)) + "\nDue: " + overdueToday.due_date + "\ngd: " + gdDue.getValue()+ "\nDur: " + duration.getDayPart() +"\nTrueFee: " + true_fee + "\nNewFee:" +new_fee);
+	
+	overdueToday.setValue('u_field_name_2', 'USD;'+new_fee);
+	overdueToday.update();
+}
+gs.info("Updated " +overdueToday.getRowCount()+ " overdue records");
+// gs.info("Execution Complete");]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>harold.yamo</sys_created_by>
+        <sys_created_on>2022-10-18 07:37:54</sys_created_on>
+        <sys_id>87790f6697a611103e1f7cb0f053af7e</sys_id>
+        <sys_mod_count>157</sys_mod_count>
+        <sys_name>Find Overdue Books</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sysauto_script_87790f6697a611103e1f7cb0f053af7e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-15 00:43:02</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

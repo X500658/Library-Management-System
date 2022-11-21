@@ -52,7 +52,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_898711_library_m_book_transaction.x_898711_library_m.patron</sys_name>
         <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
-        <sys_parent display_value="x_898711_library_m_book_transaction.*">a634e09e976211103e1f7cb0f053af0d</sys_parent>
+        <sys_parent display_value="x_898711_library_m_book_transaction.approval">a634e09e976211103e1f7cb0f053af0d</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
         <sys_scope_delete display_value="">14a61488ed044b9b83baa997647654e1</sys_scope_delete>

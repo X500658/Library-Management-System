@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>_fix sort</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="admin@example.com Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2022-11-09 02:45:18</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[var commas = new GlideRecord('x_898711_library_m_book_transaction');
+	
+// commas.addQuery('borrowed_books', 'CONTAINS', ',');
+// commas.addNotNullQuery('borrowed_books');
+commas.query();
+var none=0;
+var almost=0;
+var updated=0;
+var sorted = {};
+sorted.id = [];
+sorted.title = [];
+while(commas.next()){
+// 	gs.info(commas.borrowed_book +"\n" +commas.number);
+	if(commas.borrowed_book.split(',').length>1){
+// 		gs.info("list: " +commas.borrowed_book+ "\nNumber: " +commas.number);
+// 		gs.info("list: " +commas.borrowed_book+ "\nSplit: " +commas.borrowed_book.split(',').length+ "\nNum: " +commas.number);
+		var books = new GlideRecord('x_898711_library_m_books');
+		books.addQuery('sys_id', 'IN', commas.borrowed_book);
+		books.orderBy('title');
+		books.query();		
+		sorted.id = [];
+		sorted.title = [];
+		var list= commas.borrowed_book+'';
+		while(books.next()){
+			sorted.id.push(books.sys_id+"");
+			sorted.title.push(books.title+"");
+		}
+		sorted.count=books.getRowCount();
+		if(list!=sorted.id){
+// 			gs.info("Updated\n#Books: "+books.getRowCount()+ "\nList: " +list+ "\nSorted: " +sorted.id);
+			commas.setValue('borrowed_book', sorted.id);
+			commas.update();
+			updated++;
+		}else{
+			almost++;
+		}
+	}else{
+		none++;
+	}
+}
+gs.info("None: "+none+ "\nAlmost: "+almost+ "\nUpdate: "+updated);]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 02:55:42</sys_created_on>
+        <sys_id>bed91f21978311103e1f7cb0f053af3f</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>_fix sort</sys_name>
+        <sys_package display_value="Library Management System" source="x_898711_library_m">bf42c94f971211103e1f7cb0f053af8b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Library Management System">bf42c94f971211103e1f7cb0f053af8b</sys_scope>
+        <sys_update_name>sysauto_script_bed91f21978311103e1f7cb0f053af3f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 05:08:34</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
